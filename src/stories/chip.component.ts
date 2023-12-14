@@ -3,36 +3,34 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   standalone:true,
-  selector: 'storybook-button', 
+  selector: 'storybook-chip', 
   imports: [CommonModule],
-  template: ` <button
+  template: ` <div
+    class="chip"
     type="button"
     (click)="onClick.emit($event)"
     [ngClass]="classes"
-  >
+  ><div class="circle"></div>
     {{ label }}
-  </button>`,
-  styleUrls: ['./button.css'],
+</div>`,
+  styleUrls: ['./chip.css'],
 })
 export default class ButtonComponent {
 
   @Input()
-  hierarchy: 'primary' | 'secondary' | 'ghost' = 'primary';
+  state: 'normal' | ':hover' | ':disabled' = 'normal';
 
   @Input()
   color: 'none' | 'white' | 'info' | 'success' | 'warning' | 'error' = 'none';
 
   @Input()
-  size: 'small' | 'medium' | 'large' = 'medium';
-
-  @Input()
-  label = 'Button';
+  label = 'Label';
 
   @Output()
   onClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
 
-    return ['storybook-button', ` ${this.size} `, ` ${this.color} `, ` ${this.hierarchy} `];
+    return ['storybook-chip', ` ${this.state} `, ` ${this.color} `];
   }
 }
