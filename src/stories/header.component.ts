@@ -26,7 +26,7 @@ import type { User } from './User';
       </div>
       <div>
         <div *ngIf="user">
-          <span class="welcome">
+          <!-- <span class="welcome">
             Welcome, <b>{{ user.name }}</b
             >!
           </span>
@@ -53,7 +53,7 @@ import type { User } from './User';
             class="margin-left"
             (onClick)="onCreateAccount.emit($event)"
             label="Sign up"
-          ></storybook-button>
+          ></storybook-button> -->
         </div>
       </div>
     </div>

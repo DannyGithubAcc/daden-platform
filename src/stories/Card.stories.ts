@@ -3,7 +3,7 @@ import Card from './card.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta<Card> = {
-  title: 'Atom/Card',
+  title: 'Molecule/Card',
   component: Card,
   tags: ['autodocs'],
   render: (args: Card) => ({

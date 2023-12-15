@@ -1,16 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { CardDataPrimary } from'./Carddata.stories';
+import CardDataComponent from './carddata.component'; 
 
 @Component({
   standalone:true,
   selector: 'storybook-card', 
-  imports: [CommonModule],
-  template: ` <div class="card card--square"
-    [ngClass]="classes">
-    <h3> {{ title }} </h3>
-    {{ content }}
-    <p class="detail"> {{ cardData }} </p>
-</div>`,
+  imports: [CardDataComponent],
+  template: ` 
+    <div class="card card--square">
+      <h3> {{ title }} </h3>
+      <div class="card-content">{{ content }}</div>
+      <storybook-carddata
+        [state]="'normal'"
+        [color]="'none'"
+        [label]="'label'">
+      </storybook-carddata>
+    </div>`,
   styleUrls: ['./card.css'],
 })
 export default class CardComponent {

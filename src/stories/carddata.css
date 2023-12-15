@@ -1,0 +1,8 @@
+
+.storybook-carddata {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	gap:1rem 0.5rem;
+}

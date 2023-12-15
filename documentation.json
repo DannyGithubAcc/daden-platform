@@ -269,115 +269,8 @@
             }
         },
         {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-f6503e1fbb767e09a8fac6849f9cfb8fb214877f29c55326239aa5aea591e9739b9ecabf8b7f65c1b5d6611ea1bcb1c3c78cc2e635ef41e45143848455e15c7d-1",
-            "file": "src/stories/chip.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
-            "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "color",
-                    "defaultValue": "'none'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 23,
-                    "type": "\"none\" | \"white\" | \"info\" | \"success\" | \"warning\" | \"error\"",
-                    "decorators": []
-                },
-                {
-                    "name": "hierarchy",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 20,
-                    "type": "\"primary\" | \"secondary\" | \"ghost\"",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 29,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 26,
-                    "type": "\"small\" | \"medium\" | \"large\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 32,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-button', \r\n  imports: [CommonModule],\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n\r\n  @Input()\r\n  hierarchy: 'primary' | 'secondary' | 'ghost' = 'primary';\r\n\r\n  @Input()\r\n  color: 'none' | 'white' | 'info' | 'success' | 'warning' | 'error' = 'none';\r\n\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-button', ` ${this.size} `, ` ${this.color} `, ` ${this.hierarchy} `];\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "\r\n.storybook-button {\r\n\tfont-family: 'Inter', sans-serif;\r\n\tdisplay:flex;\r\n\tflex-direction: row;\r\n\tgap:1rem;\r\n\r\n\tfont-size:1rem;\r\n\tfont-weight:700;\r\n\ttext-transform: uppercase;\r\n\tpadding: 0.5rem 1rem;\r\n\r\n\tbox-sizing: border-box;\r\n\tborder:0;\r\n\tborder-radius: var(--border-radius-050);\r\n\t\r\n\tcursor: pointer;\r\n\t\r\n\ttransition: background-color var(--time-025) ease-in;\r\n}\r\n\r\n.primary {\r\n\tbackground-color: var(--dark-100);\r\n\tcolor: var(--white);\r\n  \r\n\t&:hover{\r\n\t\tbackground-color: var(--dark-075);\r\n\t\tcursor: pointer;\r\n\t}\r\n\r\n\t&:disabled{\r\n\t\tbackground-color: var(--dark-025);\r\n\t\tcursor:not-allowed;\r\n\t}\r\n\r\n\t&.white{\r\n\t\tbackground-color: var(--white-100);\r\n\t\tcolor:var(--dark-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--white-075);\r\n\t\t}\r\n\t}\r\n\r\n\t&.info{\r\n\t\tbackground-color: var(--blue-100);\r\n\t\tcolor:var(--white-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--blue-075);\r\n\t\t}\r\n\t}\r\n\t\r\n\t&.danger,\r\n\t&.error{\r\n\t\tbackground-color:var(--red-100);\r\n\t\tcolor:var(--white-100);\r\n\r\n\t\t&.danger:hover,\r\n\t\t&.error:hover{\r\n\t\t\tbackground-color:var(--red-075);\r\n\t\t}\r\n\t}\r\n\r\n\t&.warning,\r\n\t&.caution{\r\n\t\tbackground-color:var(--yellow-100);\r\n\t\tcolor:var(--dark-100);\r\n\r\n\t\t&.warning:hover,\r\n\t\t&.caution:hover{\r\n\t\t\tbackground-color:var(--yellow-075);\r\n\t\t}\r\n\t}\r\n\r\n\t&.success{\r\n\t\tbackground-color:var(--green-100);\r\n\t\tcolor:var(--white-100);\r\n\r\n\t\t&.success:hover{\r\n\t\t\tbackground-color:var(--green-075);\r\n\t\t}\r\n\t}\r\n}\r\n.secondary {\r\n\tborder:0 solid var(--dark-100);\r\n\tbackground-color: transparent;\r\n\tcolor:var(--dark-100);\r\n\r\n\t&:hover{\r\n\t\tbackground-color: var(--dark-010);\r\n\t}\r\n\r\n\t&:disabled{\r\n\t\tcolor:var(--dark-025);\r\n\t\tcursor:not-allowed;\r\n\t\t&:hover{\r\n\t\t\tbackground-color:transparent;\r\n\t\t}\r\n\t}\r\n\r\n\t&.white{\r\n\t\tcolor:var(--white-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--white-025);\r\n\t\t\tcolor:var(--white-100);\r\n\t\t}\r\n\t}\r\n\r\n\t&.info{\r\n\t\tcolor:var(--blue-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--blue-025);\r\n\t\t\tcolor:var(--blue-100);\r\n\t\t}\r\n\t}\r\n\t\r\n\t&.danger,\r\n\t&.error{\r\n\t\tcolor:var(--red-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--red-025);\r\n\t\t\tcolor:var(--red-100);\r\n\t\t}\r\n\t}\r\n\r\n\t&.warning,\r\n\t&.caution{\r\n\t\tcolor:var(--yellow-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--yellow-025);\r\n\t\t\tcolor:var(--yellow-100);\r\n\t\t}\r\n\t}\r\n\r\n\t&.success{\r\n\t\tcolor:var(--green-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--green-025);\r\n\t\t\tcolor:var(--green-100);\r\n\t\t}\r\n\t}\r\n}\r\n.ghost {\r\n\tborder:var(--size-010) solid var(--dark-100);\r\n\tbackground-color: transparent;\r\n\tcolor:var(--dark-100);\r\n\r\n\t&:hover{\r\n\t\tbackground-color: var(--dark-010);\r\n\t}\r\n\r\n\t&:disabled{\r\n\t\tcolor:var(--dark-025);\r\n\tborder-color:var(--dark-025);\r\n\tcursor:not-allowed;\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color:transparent;\r\n\t\t}\r\n\t}\r\n\r\n\t&.white{\r\n\tcolor:var(--white-100);\r\n\tborder-color:var(--white-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--white-025);\r\n\t\t\tcolor:var(--white-100);\r\n\t\t}\r\n\t}\r\n\r\n\t&.info{\r\n\tcolor:var(--blue-100);\r\n\tborder-color:var(--blue-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--blue-025);\r\n\t\t\tcolor:var(--blue-100);\r\n\t\t}\r\n\t}\r\n\t\r\n\t&.danger,\r\n\t&.error{\r\n\tcolor:var(--red-100);\r\n\tborder-color:var(--red-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--red-025);\r\n\t\t\tcolor:var(--red-100);\r\n\t\t}\r\n\t}\r\n\r\n\t&.warning,\r\n\t&.caution{\r\n\tcolor:var(--yellow-100);\r\n\tborder-color:var(--yellow-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--yellow-025);\r\n\t\t\tcolor:var(--yellow-100);\r\n\t\t}\r\n\t}\r\n\r\n\t&.success{\r\n\tcolor:var(--green-100);\r\n\tborder-color:var(--green-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--green-025);\r\n\t\t\tcolor:var(--green-100);\r\n\t\t}\r\n\t}\r\n}\r\n.small {\r\n\tpadding:0.5rem 0.5rem;\r\n\tfont-size:0.75rem;\r\n\tgap:0.25rem;\r\n}\r\n\r\n.medium {\r\n\tfont-size:1rem;\r\n\tpadding: 0.5rem 1rem;\r\n\tgap:1rem;\r\n\tborder-radius:var(--border-radius-050);\r\n}\r\n\r\n.large {\r\n\tgap:1.5rem;\r\n\tpadding:1rem 1.5rem;\r\n\tfont-size:1.5rem;\r\n\tborder-radius:var(--border-radius-100);\r\n}",
-                    "styleUrl": "./button.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": [],
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 34
-                    }
-                }
-            },
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "ButtonComponent-1"
-        },
-        {
             "name": "CardComponent",
-            "id": "component-CardComponent-852660d2db360309bd292a45e469f41efbd5a6c52862efa057d9311b438f5a450c06ec51788d327180ad8f4dc7a2847601cace175494998e488f8bb05cd5d8cb",
+            "id": "component-CardComponent-217b8a0ef02dd9f311cbe567ee027ab967cebd8ce9deecf15c71915da2f2c8b5ad7f0e68a692be0f0bb55b4db206e85b9420865ab68ff0ab73de25572d8d02ce",
             "file": "src/stories/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -389,7 +282,7 @@
                 "./card.css"
             ],
             "styles": [],
-            "template": " <div class=\"card card--square\"    [ngClass]=\"classes\">\n    <h3> {{ title }} </h3>\n    {{ content }}\n    <p class=\"detail\"> {{ cardData }} </p>\n</div>",
+            "template": " <div class=\"card card--square\">    <h3> {{ title }} </h3>\n    {{ content }}\n    <p class=\"detail\"> {{ cardData }} </p>\n</div>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -399,7 +292,7 @@
                     "defaultValue": "'Card Data'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 26,
                     "type": "string",
                     "decorators": []
                 },
@@ -408,7 +301,7 @@
                     "defaultValue": "'content'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 20,
                     "type": "string",
                     "decorators": []
                 },
@@ -417,7 +310,7 @@
                     "defaultValue": "'Card Title'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 23,
                     "type": "string",
                     "decorators": []
                 }
@@ -432,14 +325,14 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "CommonModule",
-                    "type": "module"
+                    "name": "CardDataComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-card', \r\n  imports: [CommonModule],\r\n  template: ` <div class=\"card card--square\"\r\n    [ngClass]=\"classes\">\r\n    <h3> {{ title }} </h3>\r\n    {{ content }}\r\n    <p class=\"detail\"> {{ cardData }} </p>\r\n</div>`,\r\n  styleUrls: ['./card.css'],\r\n})\r\nexport default class CardComponent {\r\n\r\n  @Input()\r\n  content = 'content';\r\n\r\n  @Input()\r\n  title = 'Card Title';\r\n\r\n  @Input()\r\n  cardData = 'Card Data';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-card'];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { CardDataPrimary } from'./Carddata.stories';\r\nimport CardDataComponent from './carddata.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-card', \r\n  imports: [CardDataComponent],\r\n  template: ` <div class=\"card card--square\">\r\n    <h3> {{ title }} </h3>\r\n    {{ content }}\r\n    <p class=\"detail\"> {{ cardData }} </p>\r\n</div>`,\r\n  styleUrls: ['./card.css'],\r\n})\r\nexport default class CardComponent {\r\n\r\n  @Input()\r\n  content = 'content';\r\n\r\n  @Input()\r\n  title = 'Card Title';\r\n\r\n  @Input()\r\n  cardData = 'Card Data';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-card'];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -456,7 +349,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 27
+                        "line": 28
                     }
                 }
             }
@@ -503,8 +396,198 @@
             "templateData": "<p>card works!</p>\r\n"
         },
         {
+            "name": "CardDataComponent",
+            "id": "component-CardDataComponent-f26c32262f7dab351b215b5daf6ef7627ce7f944101083d29ac33845b6869f1e4e69c904ad671bc53c7101e728e7c47e06e1e24c44bca1582e404bce03ea5ad2",
+            "file": "src/stories/carddata.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-carddata",
+            "styleUrls": [
+                "./carddata.css"
+            ],
+            "styles": [],
+            "template": " <div class=\"storybook-carddata\">\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--red-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--green-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--yellow-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--blue-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'none'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 46,
+                    "type": "\"none\" | \"white\" | \"info\" | \"success\" | \"warning\" | \"error\"",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 49,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "state",
+                    "defaultValue": "'normal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 43,
+                    "type": "\"normal\" | \":hover\" | \":disabled\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 52,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ChipComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { ChipPrimary } from'./Chip.stories';\r\nimport ChipComponent from './chip.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-carddata', \r\n  imports: [ChipComponent],\r\n  template: ` \r\n    <div class=\"storybook-carddata\">\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--red-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--green-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--yellow-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--blue-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n    </div>\r\n  `,\r\n  styleUrls: ['./carddata.css'],\r\n})\r\nexport default class CardDataComponent {\r\n\r\n  @Input()\r\n  state: 'normal' | ':hover' | ':disabled' = 'normal';\r\n\r\n  @Input()\r\n  color: 'none' | 'white' | 'info' | 'success' | 'warning' | 'error' = 'none';\r\n\r\n  @Input()\r\n  label = 'Label';\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-carddata', ` ${this.state} `, ` ${this.color} `];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n.storybook-carddata {\r\n\tdisplay:flex;\r\n\tflex-direction: row;\r\n\tflex-wrap: wrap;\r\n\talign-items: center;\r\n\tgap:1rem 0.5rem;\r\n}",
+                    "styleUrl": "./carddata.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 54
+                    }
+                }
+            }
+        },
+        {
+            "name": "ChipComponent",
+            "id": "component-ChipComponent-0d08557b654a85ab67844fdb884c1e2602cc73818ecf026e65397358459093f58d04097d233d0be3218b228d38c478323fdb6dc50d8c91d7cfb44ae6bb79e207",
+            "file": "src/stories/chip.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-chip",
+            "styleUrls": [
+                "./chip.css"
+            ],
+            "styles": [],
+            "template": " <div    class=\"chip\"\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n  ><div class=\"circle\"\n      [style.backgroundColor]=\"circleColor\"></div>\n    {{ label }}\n</div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "circleColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "state",
+                    "defaultValue": "'normal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "\"normal\" | \":hover\" | \":disabled\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-chip', \r\n  imports: [CommonModule],\r\n  template: ` <div\r\n    class=\"chip\"\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n  ><div class=\"circle\"\r\n      [style.backgroundColor]=\"circleColor\"></div>\r\n    {{ label }}\r\n</div>`,\r\n  styleUrls: ['./chip.css'],\r\n})\r\nexport default class ChipComponent {\r\n\r\n  @Input()\r\n  state: 'normal' | ':hover' | ':disabled' = 'normal';\r\n\r\n  @Input()\r\n  label = 'Label';\r\n\r\n  @Input()\r\n  circleColor: string = ''; // New input for the color of the circle\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-chip', ` ${this.state} `];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n.storybook-chip {\r\n\tfont-family: 'Inter', sans-serif;\r\n\tdisplay:flex;\r\n\tflex-direction: row;\r\n\talign-items: center;\r\n\tgap:0.5rem;\r\n\tpadding-right:0.75rem;\r\n\r\n\tfont-size:0.75rem;\r\n\tfont-weight:700;\r\n\ttext-transform: uppercase;\r\n\r\n\tbox-sizing: border-box;\r\n\twidth:fit-content;\r\n\tborder:var(--size-005) solid var(--dark-005);\r\n\tborder-radius: var(--border-radius-100);\r\n\t\r\n\tcursor: pointer;\r\n\t\r\n\ttransition: \r\n\t\tbackground-color var(--time-025) ease-in;\r\n\t\r\n\tbackground-color: var(--white);\r\n\tcolor: var(--dark-075);\r\n  \r\n\t&:hover{\r\n\t\tbackground-color: var(--dark-005);\r\n\t\tborder:var(--size-005) solid var(--dark-005);\r\n\t\tcursor: pointer;\r\n\t}\r\n\r\n\t.circle{\r\n\t\tbackground-color: lightblue;\r\n\t\theight:1.5rem;\r\n\t\twidth:1.5rem;\r\n\t\tborder-radius:50%;\r\n\t}\r\n\r\n\t&:disabled{\r\n\t\tbackground-color: var(--dark-025);\r\n\t\tcolor: var(--dark-075);\r\n\t\tcursor:not-allowed;\r\n\t}\r\n\t\r\n\t&.white{\r\n\t\tbackground-color: var(--white-100);\r\n\t\tcolor:var(--dark-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--white-075);\r\n\t\t}\r\n\t}\r\n\r\n\t&.info{\r\n\t\tbackground-color: var(--blue-100);\r\n\t\tcolor:var(--white-100);\r\n\r\n\t\t&:hover{\r\n\t\t\tbackground-color: var(--blue-075);\r\n\t\t}\r\n\t}\r\n\t\r\n\t&.danger,\r\n\t&.error{\r\n\t\tbackground-color:var(--red-100);\r\n\t\tcolor:var(--white-100);\r\n\r\n\t\t&.danger:hover,\r\n\t\t&.error:hover{\r\n\t\t\tbackground-color:var(--red-075);\r\n\t\t}\r\n\t}\r\n\r\n\t&.warning,\r\n\t&.caution{\r\n\t\tbackground-color:var(--yellow-100);\r\n\t\tcolor:var(--dark-100);\r\n\r\n\t\t&.warning:hover,\r\n\t\t&.caution:hover{\r\n\t\t\tbackground-color:var(--yellow-075);\r\n\t\t}\r\n\t}\r\n\r\n\t&.success{\r\n\t\tbackground-color:var(--green-100);\r\n\t\tcolor:var(--white-100);\r\n\r\n\t\t&.success:hover{\r\n\t\t\tbackground-color:var(--green-075);\r\n\t\t}\r\n\t}\r\n}",
+                    "styleUrl": "./chip.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 33
+                    }
+                }
+            }
+        },
+        {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-2be65d757903e1068f51ac561d212aac4eff48aa0ca9141c5d1f0e51915091c22b983193c432fa9d236673f3cb7bbabb05b7f4c417044a2de0260d85dc1263a8",
+            "id": "component-HeaderComponent-fd03e53e79d26017c55b353d0b22a4ef0477039f51141f13baeab891b9063cafefecf7e4a675dd22520cab56da52736fa92cb1a9b5d99ba911c772bcdef94235",
             "file": "src/stories/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -516,7 +599,7 @@
                 "./header.css"
             ],
             "styles": [],
-            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
+            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <!-- <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button> -->\n        </div>\n      </div>\n    </div>\n  </header>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -568,7 +651,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  template: `<header>\r\n    <div class=\"storybook-header\">\r\n      <div>\r\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n              fill=\"#FFF\"\r\n            />\r\n            <path\r\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n              fill=\"#555AB9\"\r\n            />\r\n            <path\r\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n              fill=\"#91BAF8\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        <h1>Acme</h1>\r\n      </div>\r\n      <div>\r\n        <div *ngIf=\"user\">\r\n          <span class=\"welcome\">\r\n            Welcome, <b>{{ user.name }}</b\r\n            >!\r\n          </span>\r\n          <storybook-button\r\n            *ngIf=\"user\"\r\n            size=\"small\"\r\n            (onClick)=\"onLogout.emit($event)\"\r\n            label=\"Log out\"\r\n          ></storybook-button>\r\n        </div>\r\n        <div *ngIf=\"!user\">\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onLogin.emit($event)\"\r\n            label=\"Log in\"\r\n          ></storybook-button>\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            primary\r\n            size=\"small\"\r\n            primary=\"true\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onCreateAccount.emit($event)\"\r\n            label=\"Sign up\"\r\n          ></storybook-button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  template: `<header>\r\n    <div class=\"storybook-header\">\r\n      <div>\r\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n              fill=\"#FFF\"\r\n            />\r\n            <path\r\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n              fill=\"#555AB9\"\r\n            />\r\n            <path\r\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n              fill=\"#91BAF8\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        <h1>Acme</h1>\r\n      </div>\r\n      <div>\r\n        <div *ngIf=\"user\">\r\n          <!-- <span class=\"welcome\">\r\n            Welcome, <b>{{ user.name }}</b\r\n            >!\r\n          </span>\r\n          <storybook-button\r\n            *ngIf=\"user\"\r\n            size=\"small\"\r\n            (onClick)=\"onLogout.emit($event)\"\r\n            label=\"Log out\"\r\n          ></storybook-button>\r\n        </div>\r\n        <div *ngIf=\"!user\">\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onLogin.emit($event)\"\r\n            label=\"Log in\"\r\n          ></storybook-button>\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            primary\r\n            size=\"small\"\r\n            primary=\"true\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onCreateAccount.emit($event)\"\r\n            label=\"Sign up\"\r\n          ></storybook-button> -->\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -746,20 +829,30 @@
                 "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
             },
             {
-                "name": "Error",
+                "name": "CardDataPrimary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/Carddata.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'error',\r\n    label: 'Button',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    color: 'none',\r\n    state: 'normal',\r\n    label: 'Chip',\r\n  },\r\n}"
+            },
+            {
+                "name": "ChipPrimary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Chip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    state: 'normal',\r\n    label: 'Chip',\r\n    circleColor: '#ff0000',\r\n  },\r\n}"
             },
             {
                 "name": "Error",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
+                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -776,30 +869,10 @@
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'ghost',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
             },
             {
-                "name": "Ghost",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'ghost',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
                 "name": "Info",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'info',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "Info",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -816,16 +889,6 @@
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Mand',\r\n  },\r\n}"
             },
             {
-                "name": "Kort",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Mand',\r\n  },\r\n}"
-            },
-            {
                 "name": "Lang",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -836,30 +899,10 @@
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Dit is een knop met een heel lange tekst',\r\n  },\r\n}"
             },
             {
-                "name": "Lang",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Dit is een knop met een heel lange tekst',\r\n  },\r\n}"
-            },
-            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "Large",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -916,16 +959,6 @@
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
             },
             {
-                "name": "Medium",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -953,7 +986,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<Card>",
-                "defaultValue": "{\r\n  title: 'Atom/Card',\r\n  component: Card,\r\n  tags: ['autodocs'],\r\n  render: (args: Card) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  title: 'Molecule/Card',\r\n  component: Card,\r\n  tags: ['autodocs'],\r\n  render: (args: Card) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Carddata.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<carddata>",
+                "defaultValue": "{\r\n  title: 'Molecule/carddata',\r\n  component: carddata,\r\n  tags: ['autodocs'],\r\n  render: (args: carddata) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
             },
             {
                 "name": "meta",
@@ -962,8 +1005,8 @@
                 "file": "src/stories/Chip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<Button>",
-                "defaultValue": "{\r\n  title: 'Atom/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                "type": "Meta<Chip>",
+                "defaultValue": "{\r\n  title: 'Atom/Chip',\r\n  component: Chip,\r\n  tags: ['autodocs'],\r\n  render: (args: Chip) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
             },
             {
                 "name": "meta",
@@ -1033,17 +1076,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the Card',\r\n    content: 'This is the content of the card', \r\n    cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the Card',\r\n    content: 'This is the content of the card', \r\n    // cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1066,30 +1099,10 @@
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'secondary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
             },
             {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'secondary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1106,16 +1119,6 @@
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'success',\r\n    label: 'Button',\r\n  },\r\n}"
             },
             {
-                "name": "Success",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'success',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
                 "name": "Warning",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1126,30 +1129,10 @@
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'warning',\r\n    label: 'Button',\r\n  },\r\n}"
             },
             {
-                "name": "Warning",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'warning',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
                 "name": "White",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'white',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "White",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Chip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1195,7 +1178,18 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<Button>",
+                "rawtype": "StoryObj<carddata>",
+                "file": "src/stories/Carddata.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Chip>",
                 "file": "src/stories/Chip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1248,6 +1242,50 @@
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
                     "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
+                }
+            ],
+            "src/stories/Carddata.stories.ts": [
+                {
+                    "name": "CardDataPrimary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Carddata.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    color: 'none',\r\n    state: 'normal',\r\n    label: 'Chip',\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Carddata.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<carddata>",
+                    "defaultValue": "{\r\n  title: 'Molecule/carddata',\r\n  component: carddata,\r\n  tags: ['autodocs'],\r\n  render: (args: carddata) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                }
+            ],
+            "src/stories/Chip.stories.ts": [
+                {
+                    "name": "ChipPrimary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Chip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    state: 'normal',\r\n    label: 'Chip',\r\n    circleColor: '#ff0000',\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Chip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Chip>",
+                    "defaultValue": "{\r\n  title: 'Atom/Chip',\r\n  component: Chip,\r\n  tags: ['autodocs'],\r\n  render: (args: Chip) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -1386,148 +1424,6 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'white',\r\n    label: 'Button',\r\n  },\r\n}"
-                }
-            ],
-            "src/stories/Chip.stories.ts": [
-                {
-                    "name": "Error",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'error',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Ghost",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'ghost',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Info",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'info',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Kort",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Mand',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Lang",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Dit is een knop met een heel lange tekst',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Medium",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Button>",
-                    "defaultValue": "{\r\n  title: 'Atom/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'secondary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Success",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'success',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Warning",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'warning',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "White",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Chip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1629,7 +1525,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<Card>",
-                    "defaultValue": "{\r\n  title: 'Atom/Card',\r\n  component: Card,\r\n  tags: ['autodocs'],\r\n  render: (args: Card) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  title: 'Molecule/Card',\r\n  component: Card,\r\n  tags: ['autodocs'],\r\n  render: (args: Card) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1639,7 +1535,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the Card',\r\n    content: 'This is the content of the card', \r\n    cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the Card',\r\n    content: 'This is the content of the card', \r\n    // cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
                 }
             ],
             "src/stories/Typography.stories.ts": [
@@ -1719,12 +1615,25 @@
                     "kind": 183
                 }
             ],
+            "src/stories/Carddata.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<carddata>",
+                    "file": "src/stories/Carddata.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "src/stories/Chip.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<Button>",
+                    "rawtype": "StoryObj<Chip>",
                     "file": "src/stories/Chip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -1997,77 +1906,17 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Chip.stories.ts",
+                "filePath": "src/stories/Carddata.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Error",
+                "name": "CardDataPrimary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Ghost",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Info",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Kort",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Lang",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Medium",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
+                "filePath": "src/stories/Carddata.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2081,7 +1930,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "ChipPrimary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2091,47 +1940,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Success",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Warning",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Chip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "White",
+                "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2253,12 +2062,21 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/carddata.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardDataComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/chip.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "ButtonComponent",
+                "name": "ChipComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {

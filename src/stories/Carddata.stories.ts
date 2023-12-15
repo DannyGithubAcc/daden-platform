@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import Chip from './chip.component';
+import carddata from './carddata.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
-const meta: Meta<Chip> = {
-  title: 'Atom/Chip',
-  component: Chip,
+const meta: Meta<carddata> = {
+  title: 'Molecule/carddata',
+  component: carddata,
   tags: ['autodocs'],
-  render: (args: Chip) => ({
+  render: (args: carddata) => ({
     props: {
       backgroundColor: null,
       ...args,
@@ -15,14 +15,17 @@ const meta: Meta<Chip> = {
 };
 
 export default meta;
-type Story = StoryObj<Chip>;
+type Story = StoryObj<carddata>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 
-export const ChipPrimary: Story = {
+export const CardDataPrimary: Story = {
+  render: (args) => ({
+    props: args,
+      }),
   args: {
+    color: 'none',
     state: 'normal',
     label: 'Chip',
-    circleColor: '#ff0000',
   },
 };

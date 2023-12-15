@@ -10,27 +10,28 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     type="button"
     (click)="onClick.emit($event)"
     [ngClass]="classes"
-  ><div class="circle"></div>
+  ><div class="circle"
+      [style.backgroundColor]="circleColor"></div>
     {{ label }}
 </div>`,
   styleUrls: ['./chip.css'],
 })
-export default class ButtonComponent {
+export default class ChipComponent {
 
   @Input()
   state: 'normal' | ':hover' | ':disabled' = 'normal';
 
   @Input()
-  color: 'none' | 'white' | 'info' | 'success' | 'warning' | 'error' = 'none';
+  label = 'Label';
 
   @Input()
-  label = 'Label';
+  circleColor: string = ''; // New input for the color of the circle
 
   @Output()
   onClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
 
-    return ['storybook-chip', ` ${this.state} `, ` ${this.color} `];
+    return ['storybook-chip', ` ${this.state} `];
   }
 }
