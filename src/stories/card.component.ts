@@ -6,32 +6,24 @@ import CardDataComponent from './carddata.component';
 @Component({
   standalone:true,
   selector: 'storybook-card', 
-  imports: [CardDataComponent],
+  imports: [CommonModule, CardDataComponent],
   template: ` 
-    <div class="card card--square">
-      <h3> {{ title }} </h3>
-      <div class="card-content">{{ content }}</div>
-      <storybook-carddata
-        [state]="'normal'"
-        [color]="'none'"
-        [label]="'label'">
-      </storybook-carddata>
+    <div class="card card--square"
+    [ngClass]="classes">
+    <div class="card-content">{{ content }}</div>
     </div>`,
   styleUrls: ['./card.css'],
 })
 export default class CardComponent {
 
   @Input()
+  shape: 'square' | 'high' | 'wide' | 'full-width' = 'square';
+
+  @Input()
   content = 'content';
-
-  @Input()
-  title = 'Card Title';
-
-  @Input()
-  cardData = 'Card Data';
 
   public get classes(): string[] {
 
-    return ['storybook-card'];
+    return ['storybook-card', ` ${this.shape} `];
   }
 }

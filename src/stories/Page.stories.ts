@@ -8,7 +8,7 @@ import Header from './header.component';
 import Page from './page.component';
 
 const meta: Meta<Page> = {
-  title: 'Example/Page',
+  title: 'X/Page',
   component: Page,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout

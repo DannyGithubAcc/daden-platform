@@ -162,6 +162,30 @@ body{
 	line-height:24px;
 	font-weight:400;
 	color: var(--dark-100);
+
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 0;
+
+	display:flex;
+	flex-direction:column;
+}
+
+::selection{
+	color:white;
+	background: var(--primary-075);
+}
+
+main{
+	flex-grow:1;
+	/* background-color: var(--primary-90); */
+	padding-block:4em;
+}
+
+.wrapper{
+	max-width: 1200px;
+	margin:0 auto;
+	padding-inline:1em;
 }
 
 p{

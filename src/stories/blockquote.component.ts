@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   selector: 'storybook-blockquote', 
   imports: [CommonModule],
   //[bigText]="bigText" must still be added to template
-  template: ` <blockquote 
+  template: ` <blockquote
     [ngClass]="classes">
     "{{ content }}"
   </blockquote>`,
