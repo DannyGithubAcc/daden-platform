@@ -10,26 +10,19 @@ import ChipComponent from './chip.component';
   template: ` 
     <div class="storybook-carddata">
       <storybook-chip
-        [state]="'normal'"
-        [label]="'Chip'"
+        [label]="'lepel'"
         [circleColor]="'var(--red-100)'"
         (click)="onClick.emit($event)">
       </storybook-chip>
       <storybook-chip
-        [state]="'normal'"
-        [label]="'Chip'"
         [circleColor]="'var(--green-100)'"
         (click)="onClick.emit($event)">
       </storybook-chip>
       <storybook-chip
-        [state]="'normal'"
-        [label]="'Chip'"
         [circleColor]="'var(--yellow-100)'"
         (click)="onClick.emit($event)">
       </storybook-chip>
       <storybook-chip
-        [state]="'normal'"
-        [label]="'Chip'"
         [circleColor]="'var(--blue-100)'"
         (click)="onClick.emit($event)">
       </storybook-chip>
@@ -37,15 +30,7 @@ import ChipComponent from './chip.component';
   `,
   styleUrls: ['./carddata.css'],
 })
-export default class CardDataComponent {
-
-  @Input()
-  state: 'normal' | ':hover' | ':disabled' = 'normal';
-
-  @Input()
-  color: 'none' | 'white' | 'info' | 'success' | 'warning' | 'error' = 'none';
-
-  @Input()
+export default class CardDataComponent {@Input()
   label = 'Label';
 
   @Output()
@@ -53,6 +38,6 @@ export default class CardDataComponent {
 
   public get classes(): string[] {
 
-    return ['storybook-carddata', ` ${this.state} `, ` ${this.color} `];
+    return ['storybook-carddata'];
   }
 }

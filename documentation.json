@@ -335,7 +335,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".card{\r\n\tscroll-margin-top: var(--size-100);\r\n\tdisplay:flex;\r\n\tflex-direction: column;\r\n\tjustify-content: space-between;\r\n\tgap:1rem;\r\n\r\n\r\n\tbox-shadow:var(--box-shadow-050);\r\n\tmax-width:30em;\r\n\ttransition:\r\n\t\tbox-shadow var(--time-025) ease,\r\n\t\tborder-radius var(--time-100) ease;\r\n\t/* gap:1em; */\r\n\tbackground-color: var(--white-100);\r\n\tborder-radius:var(--border-radius-100);\r\n\tz-index:1;\r\n\tpadding:1rem;\r\n\tmargin-bottom:var(--size-200);\r\n\r\n\t&:hover{\r\n\t\tz-index:10;\r\n\tbox-shadow:var(--box-shadow-200);\r\n\t}\r\n\t\r\n\t@media only screen and (\r\n\tmax-width: 600px) {\r\n\t\tborder-radius:0;\r\n\r\n\t\t&:hover{\r\n\t\t\tz-index:10;\r\n\tbox-shadow:0;\r\n\t\t}\r\n\t}\r\n\r\n\th3 {\r\n\t\tcolor:var(--dark-100);\r\n\t\tmargin-block: -0.1em -0.2em;\r\n\t}\r\n\r\n\t.card-content{\r\n\t\tdisplay:flex;\r\n\t\tflex-grow:1;\r\n\t\tjustify-content: center;\r\n\t\talign-items: center;\r\n\r\n\t\tbackground-color:var(--dark-010);\r\n\t\tborder-radius:var(--border-radius-050);\r\n\t}\r\n\r\n\t/* & .card__content{\r\n\t\tflex-grow:1;\r\n\t\tbackground-color:var(--primary-90);\r\n\t\tdisplay:flex;\r\n\t\tjustify-content: center;\r\n\t}\r\n\r\n\t& .pie-chart{\r\n\t\twidth:50%;\r\n\t\theight:50%;\r\n\r\n\t\tbackground-color:var(--primary-50);\r\n\t}\r\n\r\n\t& .card__closer{\r\n\t\tdisplay:flex;\r\n\t\tflex-direction:row;\r\n\t\tgap:1em;\r\n\t\tjustify-content: space-between;\r\n\t\tfont-size:0.75em;\r\n\t\tcolor:var(--primary-50);\r\n\t}\r\n\r\n\t& .card__title{\r\n\t\tmargin-block:-0.25em;\r\n\t\tmargin-inline:-0.25em;\r\n\t\tpadding-inline:0.25em;\r\n\t\tborder:solid 0.1em var(--white);\r\n\t\tborder-radius: var(--border-radius-025);\r\n\t\ttransition:border 200ms ease;\r\n\t}\r\n\r\n\t& .card__title:hover{\r\n\t\tborder:solid 0.1em var(--primary-50);\r\n\t\tbackground-color: var(--primary-95);\r\n\t} */\r\n}\r\n\r\n.square{\r\n\taspect-ratio: 1 / 1;\r\n}\r\n\r\n.high{\r\n    grid-row: span 2;\r\n}\r\n\r\n.wide{\r\n    grid-column: span 2;\r\n}\r\n\r\n.full-width{\r\n\tgrid-column: span 3;\r\n}",
+                    "data": ".card{\r\n    grid-row: span 1;\r\n\r\n\tscroll-margin-top: var(--size-100);\r\n\tdisplay:flex;\r\n\tflex-direction: column;\r\n\tjustify-content: space-between;\r\n\tgap:1rem;\r\n\r\n\r\n\tbox-shadow:var(--box-shadow-050);\r\n\tmax-width:30em;\r\n\ttransition:\r\n\t\tbox-shadow var(--time-025) ease,\r\n\t\tborder-radius var(--time-100) ease;\r\n\t/* gap:1em; */\r\n\tbackground-color: var(--white-100);\r\n\tborder-radius:var(--border-radius-100);\r\n\tz-index:1;\r\n\tpadding:1rem;\r\n\t/* margin-bottom:var(--size-200); */\r\n\r\n\t&:hover{\r\n\t\tz-index:10;\r\n\tbox-shadow:var(--box-shadow-200);\r\n\t}\r\n\t\r\n\t@media only screen and (\r\n\tmax-width: 600px) {\r\n\t\tborder-radius:0;\r\n\r\n\t\t&:hover{\r\n\t\t\tz-index:10;\r\n\tbox-shadow:0;\r\n\t\t}\r\n\t}\r\n\r\n\th3 {\r\n\t\tcolor:var(--dark-100);\r\n\t\tmargin-block: -0.1em -0.2em;\r\n\t}\r\n\r\n\t.card-content{\r\n\t\tdisplay:flex;\r\n\t\tflex-grow:1;\r\n\t\tjustify-content: center;\r\n\t\talign-items: center;\r\n\r\n\t\tbackground-color:var(--dark-010);\r\n\t\tborder-radius:var(--border-radius-050);\r\n\t}\r\n\r\n\t/* & .card__content{\r\n\t\tflex-grow:1;\r\n\t\tbackground-color:var(--primary-90);\r\n\t\tdisplay:flex;\r\n\t\tjustify-content: center;\r\n\t}\r\n\r\n\t& .pie-chart{\r\n\t\twidth:50%;\r\n\t\theight:50%;\r\n\r\n\t\tbackground-color:var(--primary-50);\r\n\t}\r\n\r\n\t& .card__closer{\r\n\t\tdisplay:flex;\r\n\t\tflex-direction:row;\r\n\t\tgap:1em;\r\n\t\tjustify-content: space-between;\r\n\t\tfont-size:0.75em;\r\n\t\tcolor:var(--primary-50);\r\n\t}\r\n\r\n\t& .card__title{\r\n\t\tmargin-block:-0.25em;\r\n\t\tmargin-inline:-0.25em;\r\n\t\tpadding-inline:0.25em;\r\n\t\tborder:solid 0.1em var(--white);\r\n\t\tborder-radius: var(--border-radius-025);\r\n\t\ttransition:border 200ms ease;\r\n\t}\r\n\r\n\t& .card__title:hover{\r\n\t\tborder:solid 0.1em var(--primary-50);\r\n\t\tbackground-color: var(--primary-95);\r\n\t} */\r\n}\r\n\r\n.square{\r\n\taspect-ratio: 1 / 1;\r\n}\r\n\r\n.high{\r\n    grid-row: span 2;\r\n}\r\n\r\n.wide{\r\n    grid-column: span 2;\r\n}\r\n\r\n.full-width{\r\n\tgrid-column: span 3;\r\n}",
                     "styleUrl": "./card.css"
                 }
             ],
@@ -628,6 +628,78 @@
             }
         },
         {
+            "name": "DashboardComponent",
+            "id": "component-DashboardComponent-6e82b694357d012fe416e2362579c39d3aa81c1f03853068a34a6f43ac163dafc6d5e148f6dac2a0ada9df6b03931962bc6213a8952d6a2eda68fbb0097cd7f7",
+            "file": "src/stories/dashboard.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-dashboard",
+            "styleUrls": [
+                "./dashboard.css"
+            ],
+            "styles": [],
+            "template": "<div class=\"dashboard\">\n  <storybook-GraphCard class=\"square\"\n    [content]=\"'This is the content of the card'\"\n    [title]=\"'Title of the GraphCard'\"\n    [cardData]=\"'This is where the Card Data goes'\">\n  </storybook-GraphCard>\n  <storybook-GraphCard class=\"square\"\n    [content]=\"'This is the content of the card'\"\n    [title]=\"'Title of the GraphCard'\"\n    [cardData]=\"'This is where the Card Data goes'\">\n  </storybook-GraphCard>\n  <storybook-card\n    [shape]= \"'wide'\">\n  </storybook-card>\n  <storybook-GraphCard class=\"square\"\n    [content]=\"'This is the content of the card'\"\n    [title]=\"'Title of the GraphCard'\"\n    [cardData]=\"'This is where the Card Data goes'\">\n  </storybook-GraphCard>\n  <storybook-GraphCard class=\"square\"\n    [content]=\"'This is the content of the card'\"\n    [title]=\"'Title of the GraphCard'\"\n    [cardData]=\"'This is where the Card Data goes'\">\n  </storybook-GraphCard>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "ListText",
+                    "defaultValue": "'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 42,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CardComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "GraphCardComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport GraphCardComponent from './graphCard.component'; \r\nimport CardComponent from './card.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-dashboard', \r\n  imports: [CardComponent, GraphCardComponent],\r\n  template: `\r\n  <div class=\"dashboard\">\r\n    <storybook-GraphCard class=\"square\"\r\n      [content]=\"'This is the content of the card'\"\r\n      [title]=\"'Title of the GraphCard'\"\r\n      [cardData]=\"'This is where the Card Data goes'\">\r\n    </storybook-GraphCard>\r\n    <storybook-GraphCard class=\"square\"\r\n      [content]=\"'This is the content of the card'\"\r\n      [title]=\"'Title of the GraphCard'\"\r\n      [cardData]=\"'This is where the Card Data goes'\">\r\n    </storybook-GraphCard>\r\n    <storybook-card\r\n      [shape]= \"'wide'\">\r\n    </storybook-card>\r\n    <storybook-GraphCard class=\"square\"\r\n      [content]=\"'This is the content of the card'\"\r\n      [title]=\"'Title of the GraphCard'\"\r\n      [cardData]=\"'This is where the Card Data goes'\">\r\n    </storybook-GraphCard>\r\n    <storybook-GraphCard class=\"square\"\r\n      [content]=\"'This is the content of the card'\"\r\n      [title]=\"'Title of the GraphCard'\"\r\n      [cardData]=\"'This is where the Card Data goes'\">\r\n    </storybook-GraphCard>\r\n  </div>\r\n  `,\r\n  styleUrls: ['./dashboard.css'],\r\n})\r\nexport default class DashboardComponent {\r\n\r\n  @Input()\r\n  ListText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-dashboard'];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".dashboard{\r\n\tdisplay:grid;\r\n\tgrid-template-columns: repeat(3, 1fr);\r\n\tgrid-auto-flow: dense;\r\n\tgap:1rem;\t\r\n\t\r\n\tmax-width: 1200px;\r\n\tmargin:0 auto;\r\n\tpadding-inline:1em;\r\n\t\r\n\t@media only screen and (max-width: 600px) {\r\n\t\tpadding-inline:0;\r\n\t}\r\n}",
+                    "styleUrl": "./dashboard.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 44
+                    }
+                }
+            }
+        },
+        {
             "name": "DatacardComponent",
             "id": "component-DatacardComponent-646af15374414ba0b42667c4415fc15a7d7310f3c64f85c91c5dea69b76ae83fa2cb4fa356f833a63ee24622b8c9f3116fb21fd8ffbaba251b30c08592781b37",
             "file": "src/stories/datacard.component.ts",
@@ -874,6 +946,74 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "ListstyleComponent",
+            "id": "component-ListstyleComponent-c16b314dd4bca79b348cd0931ecd599e3e7a7e0fc2e7ab09c3cc183b8654debe5396c9ee2b0bc52bddb97611277cde9f40b1ced8ed49a9dfc470bff72812325f",
+            "file": "src/stories/liststyle.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-liststyle",
+            "styleUrls": [
+                "./liststyle.css"
+            ],
+            "styles": [],
+            "template": "<p>Unordered list title:</p>\n<ul>\n  <li>{{ ListText }}</li>\n  <li>{{ ListText }}</li>\n  <li>{{ ListText }}</li>\n</ul>\n<p>Ordered list title:</p>\n<ol>\n  <li>{{ ListText }}</li>\n  <li>{{ ListText }}</li>\n  <li>{{ ListText }}</li>\n</ol>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "ListText",
+                    "defaultValue": "'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-liststyle', \r\n  imports: [CommonModule],\r\n  template: `\r\n  <p>Unordered list title:</p>\r\n  <ul>\r\n    <li>{{ ListText }}</li>\r\n    <li>{{ ListText }}</li>\r\n    <li>{{ ListText }}</li>\r\n  </ul>\r\n  <p>Ordered list title:</p>\r\n  <ol>\r\n    <li>{{ ListText }}</li>\r\n    <li>{{ ListText }}</li>\r\n    <li>{{ ListText }}</li>\r\n  </ol>  \r\n  `,\r\n  styleUrls: ['./liststyle.css'],\r\n})\r\nexport default class ListstyleComponent {\r\n\r\n  @Input()\r\n  ListText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-liststyle'];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "ol,\r\nul{\r\n\tpadding-left:0.5rem;\r\n}\r\n\r\np ~ ol,\r\np ~ ul{\r\n\tmargin-top:0rem;\r\n\tmargin-bottom:1rem;\r\n}\r\n\r\nul {\r\n\tline-height: 1.5em;\r\n\t/* margin: 5px 0 15px; */\r\n\tpadding-left: 2.5rem;\r\n}\r\n\r\nli {\r\n\tlist-style: none;\r\n\tposition: relative;\r\n\tpadding: 0;\r\n}\r\n\r\nul li::before {\r\n\tcontent: \"\";\r\n\tposition: absolute;\r\n\tleft: -1.75rem;\r\n\ttop: 0.5rem;\r\n\theight: 0.5rem;\r\n\twidth: 0.5rem;\r\n\tborder: 0.25rem solid var(--dark-100);\r\n\tborder-width: var(--size-010) var(--size-010) 0 0;\r\n\ttransform: rotate(45deg);\r\n}\r\n\r\nol {\r\n\tcounter-reset: item;\r\n\tlist-style-type: none;\r\n}\r\n\r\nol li {\r\n\tdisplay: block;\r\n\tposition: relative;\r\n\tleft: 2rem;\r\n\tmargin-right:2rem;\r\n}\r\n\r\nol li:before {\r\n\tcontent: counter(item) \" \";\r\n\tcounter-increment: item;\r\n\tcolor: var(--white-100);\r\n\tposition: absolute;\r\n\tleft: -2.1rem;\r\n\ttop: 0rem;\r\n\tbackground: var(--dark-100);\r\n\theight: 1.5rem;\r\n\twidth: 1.5rem;\r\n\tfont-size:1rem;\r\n\ttext-align: center;\r\n\tborder-radius: 50%;\r\n\tfont-weight: 700;\r\n\tscale:0.75;\r\n}",
+                    "styleUrl": "./liststyle.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 29
+                    }
+                }
+            }
         },
         {
             "name": "PageComponent",
@@ -1225,6 +1365,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/dashboard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Dashboard>",
+                "defaultValue": "{\r\n  title: 'Template/Dashboard',\r\n  component: Dashboard,\r\n  tags: ['autodocs'],\r\n  render: (args: Dashboard) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Datacard.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1255,6 +1405,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Liststyle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Liststyle>",
+                "defaultValue": "{\r\n  title: 'Atom/List style',\r\n  component: Liststyle,\r\n  tags: ['autodocs'],\r\n  render: (args: Liststyle) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1279,7 +1439,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  parameters: {\r\n    options: {\r\n      storySort: {\r\n        order: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', 'X'],\r\n      },\r\n    },\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1315,6 +1475,16 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/dashboard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ListText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?',\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Datacard.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1330,6 +1500,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the GraphCard',\r\n    content: 'This is the content of the card', \r\n    cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Liststyle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ListText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?',\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1453,6 +1633,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<Dashboard>",
+                "file": "src/stories/dashboard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<Datacard>",
                 "file": "src/stories/Datacard.stories.ts",
                 "deprecated": false,
@@ -1477,6 +1668,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Header>",
                 "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Liststyle>",
+                "file": "src/stories/Liststyle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1813,6 +2015,28 @@
                     "defaultValue": "{\r\n  args: {\r\n    content: 'This is the content of the card', \r\n  },\r\n}"
                 }
             ],
+            "src/stories/dashboard.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dashboard.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Dashboard>",
+                    "defaultValue": "{\r\n  title: 'Template/Dashboard',\r\n  component: Dashboard,\r\n  tags: ['autodocs'],\r\n  render: (args: Dashboard) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/dashboard.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ListText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?',\r\n  },\r\n}"
+                }
+            ],
             "src/stories/Datacard.stories.ts": [
                 {
                     "name": "meta",
@@ -1857,6 +2081,28 @@
                     "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the GraphCard',\r\n    content: 'This is the content of the card', \r\n    cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
                 }
             ],
+            "src/stories/Liststyle.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Liststyle.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Liststyle>",
+                    "defaultValue": "{\r\n  title: 'Atom/List style',\r\n  component: Liststyle,\r\n  tags: ['autodocs'],\r\n  render: (args: Liststyle) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Liststyle.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ListText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit suscipit tempore enim sequi delectus perspiciatis ipsam reprehenderit, vel in?',\r\n  },\r\n}"
+                }
+            ],
             "src/stories/Typography.stories.ts": [
                 {
                     "name": "meta",
@@ -1888,7 +2134,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  parameters: {\r\n    options: {\r\n      storySort: {\r\n        order: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', 'X'],\r\n      },\r\n    },\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
                 }
             ]
         },
@@ -1960,6 +2206,19 @@
                     "kind": 183
                 }
             ],
+            "src/stories/dashboard.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Dashboard>",
+                    "file": "src/stories/dashboard.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "src/stories/Datacard.stories.ts": [
                 {
                     "name": "Story",
@@ -1993,6 +2252,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Header>",
                     "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/Liststyle.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Liststyle>",
+                    "file": "src/stories/Liststyle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2361,6 +2633,26 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/Liststyle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Liststyle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/Page.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2465,6 +2757,35 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/dashboard.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DashboardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/datacard.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2489,6 +2810,15 @@
                 "name": "HeaderComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/liststyle.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ListstyleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {

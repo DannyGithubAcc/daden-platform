@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import carddata from './carddata.component';
+import * as Chip from './Chip.stories';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta<carddata> = {
@@ -24,8 +25,6 @@ export const CardDataPrimary: Story = {
     props: args,
       }),
   args: {
-    color: 'none',
-    state: 'normal',
-    label: 'Chip',
+    label: Chip.ChipPrimary.args?.label || 'Default Label',
   },
 };

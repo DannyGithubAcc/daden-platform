@@ -5,6 +5,11 @@ setCompodocJson(docJson);
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', '*', 'WIP'],
+      },
+    },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
