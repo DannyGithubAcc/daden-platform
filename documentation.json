@@ -1,20 +1,6 @@
 {
     "pipes": [],
-    "interfaces": [
-        {
-            "name": "User",
-            "id": "interface-User-dcc5c3137cd472dd0002d85b562efd23162e3eff53ca4438a6251e6c46e3b8299076255380d1d42f386510cb6f2cbaab49fa5b5f253be459cdc3869428c5c400",
-            "file": "src/stories/User.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "export interface User {}\r\n",
-            "properties": [],
-            "indexSignatures": [],
-            "methods": [],
-            "extends": []
-        }
-    ],
+    "interfaces": [],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -354,8 +340,88 @@
             }
         },
         {
+            "name": "CardComponent",
+            "id": "component-CardComponent-57992b3f6cfafa74d93e53c25b87fd8cd8d1da295ad6207ab2054f9f352e6452a90e85ec67e54f0372f7a9047684625efaa0b87e3e2fc68681c3ad3845abbe5f-1",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>\n\t<div class=\"wrapper\">\n\t\t<div class=\"navbar\">\n\t\t\t<div class=\"nav-left\">\n\t\t\t\t<a href=\"/daden/\" class=\"logo\">\n\t\t\t\t\t<div class=\"logo-img\">D</div>\n\t\t\t\t\t<div class=\"logo-text\">Daden Huisstijl</div>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t\t<div class=\"nav-right\">\n\t\t\t\t<a href=\"/daden/atoms\" class=\"\">Atoms</a>\n\t\t\t\t<a href=\"#\" class=\"logo\">Molecules</a>\n\t\t\t\t<a href=\"/daden/organisms\" class=\"\">Organisms</a>\n\t\t\t\t<button class=\"cta-button\">Make Your Own</button>\n\t\t\t\t<!-- <div class=\"user-img\">D</div> -->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "content",
+                    "defaultValue": "'content'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "shape",
+                    "defaultValue": "'square'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "\"square\" | \"high\" | \"wide\" | \"full-width\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-header', \r\n  imports: [CommonModule],\r\n  template: `\r\n\t<header>\r\n\t\t<div class=\"wrapper\">\r\n\t\t\t<div class=\"navbar\">\r\n\t\t\t\t<div class=\"nav-left\">\r\n\t\t\t\t\t<a href=\"/daden/\" class=\"logo\">\r\n\t\t\t\t\t\t<div class=\"logo-img\">D</div>\r\n\t\t\t\t\t\t<div class=\"logo-text\">Daden Huisstijl</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"nav-right\">\r\n\t\t\t\t\t<a href=\"/daden/atoms\" class=\"\">Atoms</a>\r\n\t\t\t\t\t<a href=\"#\" class=\"logo\">Molecules</a>\r\n\t\t\t\t\t<a href=\"/daden/organisms\" class=\"\">Organisms</a>\r\n\t\t\t\t\t<button class=\"cta-button\">Make Your Own</button>\r\n\t\t\t\t\t<!-- <div class=\"user-img\">D</div> -->\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class CardComponent {\r\n\r\n  @Input()\r\n  shape: 'square' | 'high' | 'wide' | 'full-width' = 'square';\r\n\r\n  @Input()\r\n  content = 'content';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-card', ` ${this.shape} `];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "header{\r\n\tbackground-color: var(--dark-100);\r\n\ttransition: color 0;\r\n\tcolor:var(--white);\r\n\t\r\n\t& .navbar{\r\n\t\tdisplay:flex;\r\n\t\tflex-direction: row;\r\n\t\tjustify-content: space-between;\r\n\t}\r\n\t\r\n\t.logo{\r\n\t\tdisplay:flex;\r\n\t\tflex-grow:1;\r\n\t\tgap:2em;\r\n\t\tjustify-content: center;\r\n\t\talign-items: center;\r\n\t}\r\n\r\n\t.nav-right{\r\n\t\tdisplay: flex;\r\n\t\talign-content: center;\r\n\t\tflex-wrap: wrap;\r\n\t}\r\n\r\n\t& .logo-img,\r\n\t  .user-profile{\r\n\tdisplay:flex;\r\n\tcolor:var(--dark-100);\r\n\tbackground-color:var(--white-050);\r\n\theight:2rem;\r\n\twidth:2rem;\r\n\tborder-radius:50%;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n\t}\r\n\r\n\t& .logo-text{\r\n\tfont-size:1rem;\r\n\t}\r\n\t\r\n\t& a{\r\n\t\tfont-weight:700;\r\n\t\tcolor:var(--white-100);\r\n\t\ttext-decoration: none;\r\n\t\tfont-size:1rem;\r\n\t}\r\n\r\n\ta:hover{\r\n\t\tcolor:var(--white-050);\r\n\t}\r\n\t\r\n\t& .active{\r\n\ttext-decoration-line: underline;\r\n\ttext-decoration-thickness: var(--size-010);\r\n\tcolor:var(--white-050);\r\n\t}\r\n\t\r\n\t& .active:hover{\r\n\t\tcursor: default;\r\n\t}\r\n\r\n\tbutton{\r\n\t\tdisplay: flex;\r\n\t\tborder-radius: 0;\r\n\t\talign-items: center;\r\n\t}\r\n\r\n\t& .cta-button {\r\n\tbackground-color: var(--complementary-100);\r\n\tborder-radius:var(--border-radius-050);\r\n\theight:3rem;\r\n\t}\r\n\r\n\t& .cta-button:hover{\r\n\t\tbackground-color: var(--red-075);\r\n\t}\r\n}",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 38
+                    }
+                }
+            },
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "CardComponent-1"
+        },
+        {
             "name": "CardDataComponent",
-            "id": "component-CardDataComponent-f26c32262f7dab351b215b5daf6ef7627ce7f944101083d29ac33845b6869f1e4e69c904ad671bc53c7101e728e7c47e06e1e24c44bca1582e404bce03ea5ad2",
+            "id": "component-CardDataComponent-137cc90d7731cf274157f68fb5edf5814c856b3e5553c51f333a232b3ec88c770ba3b8a42a4bf85e596ce9b2169e733e45b84318eb021987034ec5f4b6d163be",
             "file": "src/stories/carddata.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -367,36 +433,18 @@
                 "./carddata.css"
             ],
             "styles": [],
-            "template": " <div class=\"storybook-carddata\">\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--red-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--green-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--yellow-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [state]=\"'normal'\"\n    [label]=\"'Chip'\"\n    [circleColor]=\"'var(--blue-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n</div>\n",
+            "template": " <div class=\"storybook-carddata\">\n  <storybook-chip\n    [label]=\"'lepel'\"\n    [circleColor]=\"'var(--red-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [circleColor]=\"'var(--green-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [circleColor]=\"'var(--yellow-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [circleColor]=\"'var(--blue-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
                 {
-                    "name": "color",
-                    "defaultValue": "'none'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 46,
-                    "type": "\"none\" | \"white\" | \"info\" | \"success\" | \"warning\" | \"error\"",
-                    "decorators": []
-                },
-                {
                     "name": "label",
                     "defaultValue": "'Label'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 49,
+                    "line": 34,
                     "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "state",
-                    "defaultValue": "'normal'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 43,
-                    "type": "\"normal\" | \":hover\" | \":disabled\"",
                     "decorators": []
                 }
             ],
@@ -406,7 +454,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 52,
+                    "line": 37,
                     "type": "EventEmitter"
                 }
             ],
@@ -426,7 +474,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { ChipPrimary } from'./Chip.stories';\r\nimport ChipComponent from './chip.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-carddata', \r\n  imports: [ChipComponent],\r\n  template: ` \r\n    <div class=\"storybook-carddata\">\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--red-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--green-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--yellow-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [state]=\"'normal'\"\r\n        [label]=\"'Chip'\"\r\n        [circleColor]=\"'var(--blue-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n    </div>\r\n  `,\r\n  styleUrls: ['./carddata.css'],\r\n})\r\nexport default class CardDataComponent {\r\n\r\n  @Input()\r\n  state: 'normal' | ':hover' | ':disabled' = 'normal';\r\n\r\n  @Input()\r\n  color: 'none' | 'white' | 'info' | 'success' | 'warning' | 'error' = 'none';\r\n\r\n  @Input()\r\n  label = 'Label';\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-carddata', ` ${this.state} `, ` ${this.color} `];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { ChipPrimary } from'./Chip.stories';\r\nimport ChipComponent from './chip.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-carddata', \r\n  imports: [ChipComponent],\r\n  template: ` \r\n    <div class=\"storybook-carddata\">\r\n      <storybook-chip\r\n        [label]=\"'lepel'\"\r\n        [circleColor]=\"'var(--red-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [circleColor]=\"'var(--green-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [circleColor]=\"'var(--yellow-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [circleColor]=\"'var(--blue-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n    </div>\r\n  `,\r\n  styleUrls: ['./carddata.css'],\r\n})\r\nexport default class CardDataComponent {@Input()\r\n  label = 'Label';\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-carddata'];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -443,7 +491,7 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 54
+                        "line": 39
                     }
                 }
             }
@@ -871,83 +919,6 @@
             }
         },
         {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-fd03e53e79d26017c55b353d0b22a4ef0477039f51141f13baeab891b9063cafefecf7e4a675dd22520cab56da52736fa92cb1a9b5d99ba911c772bcdef94235",
-            "file": "src/stories/header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
-            "styles": [],
-            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <!-- <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button> -->\n        </div>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 65,
-                    "type": "User | null",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 74,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 68,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 71,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  template: `<header>\r\n    <div class=\"storybook-header\">\r\n      <div>\r\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n              fill=\"#FFF\"\r\n            />\r\n            <path\r\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n              fill=\"#555AB9\"\r\n            />\r\n            <path\r\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n              fill=\"#91BAF8\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        <h1>Acme</h1>\r\n      </div>\r\n      <div>\r\n        <div *ngIf=\"user\">\r\n          <!-- <span class=\"welcome\">\r\n            Welcome, <b>{{ user.name }}</b\r\n            >!\r\n          </span>\r\n          <storybook-button\r\n            *ngIf=\"user\"\r\n            size=\"small\"\r\n            (onClick)=\"onLogout.emit($event)\"\r\n            label=\"Log out\"\r\n          ></storybook-button>\r\n        </div>\r\n        <div *ngIf=\"!user\">\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onLogin.emit($event)\"\r\n            label=\"Log in\"\r\n          ></storybook-button>\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            primary\r\n            size=\"small\"\r\n            primary=\"true\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onCreateAccount.emit($event)\"\r\n            label=\"Sign up\"\r\n          ></storybook-button> -->\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-header {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n  padding: 15px 20px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\n.storybook-header svg {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header h1 {\r\n  font-weight: 700;\r\n  font-size: 20px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header button + button {\r\n  margin-left: 10px;\r\n}\r\n\r\n.storybook-header .welcome {\r\n  color: #333;\r\n  font-size: 14px;\r\n  margin-right: 10px;\r\n}\r\n",
-                    "styleUrl": "./header.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": []
-        },
-        {
             "name": "ListstyleComponent",
             "id": "component-ListstyleComponent-c16b314dd4bca79b348cd0931ecd599e3e7a7e0fc2e7ab09c3cc183b8654debe5396c9ee2b0bc52bddb97611277cde9f40b1ced8ed49a9dfc470bff72812325f",
             "file": "src/stories/liststyle.component.ts",
@@ -1014,90 +985,6 @@
                     }
                 }
             }
-        },
-        {
-            "name": "PageComponent",
-            "id": "component-PageComponent-9ceca5c9ad46a8d9400b2f1f93ec40dad8beefeaa2b709142d0f9635d7b84149a730f08610164bae9810948188f56d2ec679c891598033e17e855adf100c87c3",
-            "file": "src/stories/page.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
-            "styles": [],
-            "template": "<article>    <!-- <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header> -->\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "User | null",
-                    "optional": false,
-                    "description": "",
-                    "line": 64
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "doCreateAccount",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 74,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogin",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 70,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogout",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 66,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-page',\r\n  template: `<article>\r\n    <!-- <storybook-header\r\n      [user]=\"user\"\r\n      (onLogout)=\"doLogout()\"\r\n      (onLogin)=\"doLogin()\"\r\n      (onCreateAccount)=\"doCreateAccount()\"\r\n    ></storybook-header> -->\r\n    <section class=\"storybook-page\">\r\n      <h2>Pages in Storybook</h2>\r\n      <p>\r\n        We recommend building UIs with a\r\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          <strong>component-driven</strong>\r\n        </a>\r\n        process starting with atomic components and ending with pages.\r\n      </p>\r\n      <p>\r\n        Render pages with mock data. This makes it easy to build and review page states without\r\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\r\n        in Storybook:\r\n      </p>\r\n      <ul>\r\n        <li>\r\n          Use a higher-level connected component. Storybook helps you compose such data from the\r\n          \"args\" of child component stories\r\n        </li>\r\n        <li>\r\n          Assemble data in the page component from your services. You can mock these services out\r\n          using Storybook.\r\n        </li>\r\n      </ul>\r\n      <p>\r\n        Get a guided tutorial on component-driven development at\r\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          Storybook tutorials\r\n        </a>\r\n        . Read more in the\r\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\r\n        .\r\n      </p>\r\n      <div class=\"tip-wrapper\">\r\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n              id=\"a\"\r\n              fill=\"#999\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        Viewports addon in the toolbar\r\n      </div>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  user: User | null = null;\r\n\r\n  doLogout() {\r\n    this.user = null;\r\n  }\r\n\r\n  doLogin() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n\r\n  doCreateAccount() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-page {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\n.storybook-page h2 {\r\n  font-weight: 700;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-page p {\r\n  margin: 1em 0;\r\n}\r\n\r\n.storybook-page a {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\n.storybook-page ul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\n.storybook-page li {\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.storybook-page .tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-page .tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.storybook-page .tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\n.storybook-page .tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
-                    "styleUrl": "./page.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": []
         },
         {
             "name": "TypographyComponent",
@@ -1189,7 +1076,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    color: 'none',\r\n    state: 'normal',\r\n    label: 'Chip',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    label: Chip.ChipPrimary.args?.label || 'Default Label',\r\n  },\r\n}"
             },
             {
                 "name": "ChipPrimary",
@@ -1260,46 +1147,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    hierarchy: 'primary',\r\n    color: 'none',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\r\n    await expect(loginButton).toBeInTheDocument();\r\n    await userEvent.click(loginButton);\r\n    await expect(loginButton).not.toBeInTheDocument();\r\n\r\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\r\n    await expect(logoutButton).toBeInTheDocument();\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n}"
             },
             {
                 "name": "Medium",
@@ -1399,7 +1246,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<Header>",
-                "defaultValue": "{\r\n  title: 'X/Header',\r\n  component: Header,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Molecule/Header',\r\n  component: Header,\r\n  tags: ['autodocs'],\r\n  render: (args: Header) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
             },
             {
                 "name": "meta",
@@ -1410,16 +1257,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<Liststyle>",
                 "defaultValue": "{\r\n  title: 'Atom/List style',\r\n  component: Liststyle,\r\n  tags: ['autodocs'],\r\n  render: (args: Liststyle) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Page>",
-                "defaultValue": "{\r\n  title: 'X/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
             },
             {
                 "name": "meta",
@@ -1439,7 +1276,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\r\n  parameters: {\r\n    options: {\r\n      storySort: {\r\n        order: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', 'X'],\r\n      },\r\n    },\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  parameters: {\r\n    options: {\r\n      storySort: {\r\n        order: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', '*', 'WIP'],\r\n      },\r\n    },\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1500,6 +1337,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the GraphCard',\r\n    content: 'This is the content of the card', \r\n    cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    content: 'This is the content of the card', \r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1688,17 +1535,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<Page>",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<Typography>",
                 "file": "src/stories/Typography.stories.ts",
                 "deprecated": false,
@@ -1730,7 +1566,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    color: 'none',\r\n    state: 'normal',\r\n    label: 'Chip',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    label: Chip.ChipPrimary.args?.label || 'Default Label',\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1907,70 +1743,6 @@
                     "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    hierarchy: 'primary',\r\n    color: 'white',\r\n    label: 'Button',\r\n  },\r\n}"
                 }
             ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Header>",
-                    "defaultValue": "{\r\n  title: 'X/Header',\r\n  component: Header,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\r\n    await expect(loginButton).toBeInTheDocument();\r\n    await userEvent.click(loginButton);\r\n    await expect(loginButton).not.toBeInTheDocument();\r\n\r\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\r\n    await expect(logoutButton).toBeInTheDocument();\r\n  },\r\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Page>",
-                    "defaultValue": "{\r\n  title: 'X/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
-                }
-            ],
             "src/stories/Blockquote.stories.ts": [
                 {
                     "name": "meta",
@@ -2081,6 +1853,28 @@
                     "defaultValue": "{\r\n  args: {\r\n    title: 'Title of the GraphCard',\r\n    content: 'This is the content of the card', \r\n    cardData: 'This is where the Card Data goes',\r\n  },\r\n}"
                 }
             ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\r\n  title: 'Molecule/Header',\r\n  component: Header,\r\n  tags: ['autodocs'],\r\n  render: (args: Header) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    content: 'This is the content of the card', \r\n  },\r\n}"
+                }
+            ],
             "src/stories/Liststyle.stories.ts": [
                 {
                     "name": "meta",
@@ -2134,7 +1928,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\r\n  parameters: {\r\n    options: {\r\n      storySort: {\r\n        order: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', 'X'],\r\n      },\r\n    },\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  parameters: {\r\n    options: {\r\n      storySort: {\r\n        order: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', '*', 'WIP'],\r\n      },\r\n    },\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
                 }
             ]
         },
@@ -2265,19 +2059,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Liststyle>",
                     "file": "src/stories/Liststyle.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Page>",
-                    "file": "src/stories/Page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2607,27 +2388,17 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2653,36 +2424,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "src/stories/Typography.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2698,15 +2439,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/User.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "User",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2744,7 +2476,7 @@
                 "linktype": "component",
                 "name": "CardDataComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -2807,9 +2539,9 @@
                 "filePath": "src/stories/header.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "HeaderComponent",
+                "name": "CardComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -2819,15 +2551,6 @@
                 "name": "ListstyleComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
                 "status": "low"
             },
             {

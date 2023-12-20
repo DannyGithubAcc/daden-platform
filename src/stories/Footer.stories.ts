@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import Header from './header.component';
-import * as Button from './Button.stories';
+import Footer from './footer.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
-const meta: Meta<Header> = {
-  title: 'Molecule/Header',
-  component: Header,
+const meta: Meta<Footer> = {
+  title: 'Molecule/Footer',
+  component: Footer,
   tags: ['autodocs'],
-  render: (args: Header) => ({
+  render: (args: Footer) => ({
     props: {
       backgroundColor: null,
       ...args,
@@ -16,14 +15,12 @@ const meta: Meta<Header> = {
 };
 
 export default meta;
-type Story = StoryObj<Header>;
+type Story = StoryObj<Footer>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 
-export const HeaderPrimary: Story = {
+export const FooterPrimary: Story = {
   args: {
-    BrandLetter: 'D',
-    BrandName: 'Daden',
     item: 'item',
   },
 };

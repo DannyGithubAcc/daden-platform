@@ -3,7 +3,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { within, userEvent, expect } from '@storybook/test';
 
-import Button from './button.component';
+import Button from '../stories/button.component';
 import Header from './header.component';
 import Page from './page.component';
 

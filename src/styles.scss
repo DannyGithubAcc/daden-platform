@@ -185,7 +185,10 @@ main{
 .wrapper{
 	max-width: 1200px;
 	margin:0 auto;
-	padding-inline:1em;
+
+	@media (max-width: 600px) {
+		padding-inline:1rem;
+	}
 }
 
 p{
