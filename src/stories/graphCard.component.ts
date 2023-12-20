@@ -13,8 +13,6 @@ import CardDataComponent from './carddata.component';
       <h3> {{ title }} </h3>
       <div class="card-content">{{ content }}</div>
       <storybook-carddata
-        [state]="'normal'"
-        [color]="'none'"
         [label]="'label'">
       </storybook-carddata>
       </storybook-card>
