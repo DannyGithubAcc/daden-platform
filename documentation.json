@@ -1,6 +1,73 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "ChipData",
+            "id": "interface-ChipData-bcae5e50590a40526c1a7fa8d3700dc006dc22b41cdfc50bae4fc2a60c95d33bb3ae6b13b69335c610b20061211e500722e22652ab8c8de8529d2205a2a5fec4",
+            "file": "src/stories/Carddata.stories.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport carddata from './carddata.component';\r\nimport * as Chip from './Chip.stories';\r\n\r\ninterface ChipData {\r\n  label: string;\r\n  circleColor: string;\r\n}\r\n\r\n// More on how to set up stories at: https://storybook.js.org/docs/writing-stories\r\nconst meta: Meta<carddata> = {\r\n  title: 'Molecule/carddata',\r\n  component: carddata,\r\n  tags: ['autodocs'],\r\n  render: (args: carddata) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<carddata>;\r\n\r\n// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args\r\n\r\nexport const CardDataPrimary: Story = {\r\n  render: (args) => ({\r\n    props: args,\r\n  }),\r\n  argTypes: {\r\n    chips: { control: 'array' }, // Add this line to enable controls for 'chips'\r\n  },\r\n  args: {\r\n    chips: [\r\n      { label: 'lepel', circleColor: 'var(--red-100)' },\r\n      { label: 'someLabel', circleColor: 'var(--green-100)' },\r\n      // Add more chip data as needed\r\n    ],\r\n  },\r\n};",
+            "properties": [
+                {
+                    "name": "circleColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "IHeaderItems",
+            "id": "interface-IHeaderItems-a495d667414cdb821d10e99edf1953e4782e47cd2deb4e462f9971a6880c44f9c5728e7fd27f345f8085e11b4bddb7b951fb0581eb13ea7b86040320ea51a233",
+            "file": "src/app/interfaces/storybook/headeritem-interface.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface IHeaderItems {\r\n    name: string;\r\n    path: string;\r\n}",
+            "properties": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "path",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -8,8 +75,46 @@
     "directives": [],
     "components": [
         {
+            "name": "AboutComponent",
+            "id": "component-AboutComponent-ec9e487eaa5142811da38de632a1d8bf8c6a377816a059acd6a0d24e3415b9cc7d039bfe0a31fc1fbd5b5cb1dfabb26763f6a22a58898d3a7f40281ff70fc407",
+            "file": "src/app/about/about.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-about",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./about.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-about',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './about.component.html',\r\n  styleUrl: './about.component.scss'\r\n})\r\nexport class AboutComponent {\r\n\r\n}\r\n",
+            "styleUrl": "./about.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<h3>ABOUT WORKS</h3>\r\n"
+        },
+        {
             "name": "AppComponent",
-            "id": "component-AppComponent-97c9885baef1f7ee67eed16662468ca3b20e4f27820ca77a16a1a6a37d5d344860e0d9f23874f8eda79f7f8854f7531a5282cc5d1669613d18cdb36ed11dff35",
+            "id": "component-AppComponent-8f087d49d8cc5b43e643a1ce8bc0f35f62980e4904e665ab53a725dc64120a9b20645431fd11c7fba18b6433d723f58964d5dc68be40c4c5e03796b2756055bf",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -28,6 +133,16 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
+                    "name": "items",
+                    "defaultValue": "[\r\n    {name: \"HOME\", path: \"home\"},\r\n    {name: \"ABOUT\", path: \"about\"},\r\n    {name: \"INFOGRAPHICS\", path: \"infographic\"}\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IHeaderItems[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
                     "name": "title",
                     "defaultValue": "'daden-platform'",
                     "deprecated": false,
@@ -35,7 +150,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 14
+                    "line": 17
                 }
             ],
             "methodsClass": [],
@@ -50,6 +165,14 @@
                     "type": "module"
                 },
                 {
+                    "name": "HeaderComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "FooterComponent",
+                    "type": "component"
+                },
+                {
                     "name": "RouterOutlet"
                 },
                 {
@@ -60,13 +183,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterOutlet } from '@angular/router';\nimport { CardPlainComponent } from \"./cardplain/cardplain.component\";\n\n@Component({\n    selector: 'app-root',\n    standalone: true,\n    templateUrl: './app.component.html',\n    styleUrl: './app.component.scss',\n    imports: [CommonModule, RouterOutlet, CardPlainComponent]\n})\nexport class AppComponent {\n  title = 'daden-platform';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { CardPlainComponent } from \"./cardplain/cardplain.component\";\r\nimport HeaderComponent from '../stories/header.component';\r\nimport FooterComponent from '../stories/footer.component';\r\nimport { IHeaderItems } from './interfaces/storybook/headeritem-interface';\r\n\r\n@Component({\r\n    selector: 'app-root',\r\n    standalone: true,\r\n    templateUrl: './app.component.html',\r\n    styleUrl: './app.component.scss',\r\n    imports: [CommonModule, HeaderComponent, FooterComponent, RouterOutlet, CardPlainComponent]\r\n})\r\nexport class AppComponent {\r\n  title = 'daden-platform';\r\n  items: IHeaderItems[] = [\r\n    {name: \"HOME\", path: \"home\"},\r\n    {name: \"ABOUT\", path: \"about\"},\r\n    {name: \"INFOGRAPHICS\", path: \"infographic\"}\r\n  ]\r\n}\r\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->\n<!-- * * * * * * * to get started with your project! * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n\n<!-- <style>\n  :host {\n    --bright-blue: oklch(51.01% 0.274 263.83);\n    --electric-violet: oklch(53.18% 0.28 296.97);\n    --french-violet: oklch(47.66% 0.246 305.88);\n    --vivid-pink: oklch(69.02% 0.277 332.77);\n    --hot-red: oklch(61.42% 0.238 15.34);\n    --orange-red: oklch(63.32% 0.24 31.68);\n\n    --gray-900: oklch(19.37% 0.006 300.98);\n    --gray-700: oklch(36.98% 0.014 302.71);\n    --gray-400: oklch(70.9% 0.015 304.04);\n\n    --red-to-pink-to-purple-vertical-gradient: linear-gradient(\n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100%\n    );\n\n    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(\n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100%\n    );\n\n    --pill-accent: var(--bright-blue);\n\n    font-family: \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\n      \"Segoe UI Symbol\";\n    box-sizing: border-box;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  h1 {\n    font-size: 3.125rem;\n    color: var(--gray-900);\n    font-weight: 500;\n    line-height: 100%;\n    letter-spacing: -0.125rem;\n    margin: 0;\n    font-family: \"Inter Tight\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\n      \"Segoe UI Symbol\";\n  }\n\n  p {\n    margin: 0;\n    color: var(--gray-700);\n  }\n\n  main {\n    width: 100%;\n    min-height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 1rem;\n    box-sizing: inherit;\n    position: relative;\n  }\n\n  .angular-logo {\n    max-width: 9.2rem;\n  }\n\n  .content {\n    display: flex;\n    justify-content: space-around;\n    width: 100%;\n    max-width: 700px;\n    margin-bottom: 3rem;\n  }\n\n  .content h1 {\n    margin-top: 1.75rem;\n  }\n\n  .content p {\n    margin-top: 1.5rem;\n  }\n\n  .divider {\n    width: 1px;\n    background: var(--red-to-pink-to-purple-vertical-gradient);\n    margin-inline: 0.5rem;\n  }\n\n  .pill-group {\n    display: flex;\n    flex-direction: column;\n    align-items: start;\n    flex-wrap: wrap;\n    gap: 1.25rem;\n  }\n\n  .pill {\n    display: flex;\n    align-items: center;\n    --pill-accent: var(--bright-blue);\n    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n    color: var(--pill-accent);\n    padding-inline: 0.75rem;\n    padding-block: 0.375rem;\n    border-radius: 2.75rem;\n    border: 0;\n    transition: background 0.3s ease;\n    font-family: var(--inter-font);\n    font-size: 0.875rem;\n    font-style: normal;\n    font-weight: 500;\n    line-height: 1.4rem;\n    letter-spacing: -0.00875rem;\n    text-decoration: none;\n  }\n\n  .pill:hover {\n    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n  }\n\n  .pill-group .pill:nth-child(6n + 1) {\n    --pill-accent: var(--bright-blue);\n  }\n  .pill-group .pill:nth-child(6n + 2) {\n    --pill-accent: var(--french-violet);\n  }\n  .pill-group .pill:nth-child(6n + 3),\n  .pill-group .pill:nth-child(6n + 4),\n  .pill-group .pill:nth-child(6n + 5) {\n    --pill-accent: var(--hot-red);\n  }\n\n  .pill-group svg {\n    margin-inline-start: 0.25rem;\n  }\n\n  .social-links {\n    display: flex;\n    align-items: center;\n    gap: 0.73rem;\n    margin-top: 1.5rem;\n  }\n\n  .social-links path {\n    transition: fill 0.3s ease;\n    fill: var(--gray-400);\n  }\n\n  .social-links a:hover svg path {\n    fill: var(--gray-900);\n  }\n\n  @media screen and (max-width: 650px) {\n    .content {\n      flex-direction: column;\n      width: max-content;\n    }\n\n    .divider {\n      height: 1px;\n      width: 100%;\n      background: var(--red-to-pink-to-purple-horizontal-gradient);\n      margin-block: 1.5rem;\n    }\n  }\n</style>\n\n<main class=\"main\">\n  <div class=\"content\">\n    <div class=\"left-side\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        viewBox=\"0 0 982 239\"\n        fill=\"none\"\n        class=\"angular-logo\"\n      >\n        <g clip-path=\"url(#a)\">\n          <path\n            fill=\"url(#b)\"\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\n          />\n          <path\n            fill=\"url(#c)\"\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\n          />\n        </g>\n        <defs>\n          <radialGradient\n            id=\"c\"\n            cx=\"0\"\n            cy=\"0\"\n            r=\"1\"\n            gradientTransform=\"rotate(118.122 171.182 60.81) scale(205.794)\"\n            gradientUnits=\"userSpaceOnUse\"\n          >\n            <stop stop-color=\"#FF41F8\" />\n            <stop offset=\".707\" stop-color=\"#FF41F8\" stop-opacity=\".5\" />\n            <stop offset=\"1\" stop-color=\"#FF41F8\" stop-opacity=\"0\" />\n          </radialGradient>\n          <linearGradient\n            id=\"b\"\n            x1=\"0\"\n            x2=\"982\"\n            y1=\"192\"\n            y2=\"192\"\n            gradientUnits=\"userSpaceOnUse\"\n          >\n            <stop stop-color=\"#F0060B\" />\n            <stop offset=\"0\" stop-color=\"#F0070C\" />\n            <stop offset=\".526\" stop-color=\"#CC26D5\" />\n            <stop offset=\"1\" stop-color=\"#7702FF\" />\n          </linearGradient>\n          <clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h982v239H0z\" /></clipPath>\n        </defs>\n      </svg>\n      <h1>Hello, {{ title }}</h1>\n      <p>Congratulations! Your app is running. 🎉</p>\n    </div>\n    <div class=\"divider\" role=\"separator\" aria-label=\"Divider\"></div>\n    <div class=\"right-side\">\n      <div class=\"pill-group\">\n        @for (item of [\n          { title: 'Explore the Docs', link: 'https://angular.dev' },\n          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },\n          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },\n          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },\n          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },\n        ]; track item.title) {\n          <a\n            class=\"pill\"\n            [href]=\"item.link\"\n            target=\"_blank\"\n            rel=\"noopener\"\n          >\n            <span>{{ item.title }}</span>\n            <svg\n              xmlns=\"http://www.w3.org/2000/svg\"\n              height=\"14\"\n              viewBox=\"0 -960 960 960\"\n              width=\"14\"\n              fill=\"currentColor\"\n            >\n              <path\n                d=\"M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z\"\n              />\n            </svg>\n          </a>\n        }\n      </div>\n      <div class=\"social-links\">\n        <a\n          href=\"https://github.com/angular/angular\"\n          aria-label=\"Github\"\n          target=\"_blank\"\n          rel=\"noopener\"\n        >\n          <svg\n            width=\"25\"\n            height=\"24\"\n            viewBox=\"0 0 25 24\"\n            fill=\"none\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            alt=\"Github\"\n          >\n            <path\n              d=\"M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z\"\n            />\n          </svg>\n        </a>\n        <a\n          href=\"https://twitter.com/angular\"\n          aria-label=\"Twitter\"\n          target=\"_blank\"\n          rel=\"noopener\"\n        >\n          <svg\n            width=\"25\"\n            height=\"20\"\n            viewBox=\"0 0 25 20\"\n            fill=\"none\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            alt=\"Twitter\"\n          >\n            <path\n              d=\"M8.04524 20C17.3335 20 22.4138 12.3047 22.4138 5.63144C22.4138 5.41287 22.4138 5.19529 22.399 4.97869C23.3874 4.26381 24.2405 3.37867 24.9185 2.3647C23.9969 2.77329 23.0192 3.04112 22.018 3.15923C23.0723 2.52818 23.8613 1.53552 24.2382 0.366057C23.2469 0.954335 22.1624 1.36889 21.0315 1.59182C20.2701 0.782212 19.2631 0.246107 18.1663 0.0664704C17.0695 -0.113166 15.9441 0.0736804 14.9642 0.598096C13.9843 1.12251 13.2046 1.95526 12.7457 2.96748C12.2868 3.9797 12.1742 5.11495 12.4255 6.19756C10.4178 6.09685 8.45366 5.57507 6.66064 4.66609C4.86763 3.75712 3.28579 2.48127 2.01781 0.921344C1.37203 2.03306 1.17424 3.34911 1.46472 4.60154C1.75519 5.85397 2.51208 6.9486 3.58128 7.66257C2.77759 7.63903 1.9914 7.42221 1.28924 7.03049V7.09449C1.28956 8.26041 1.69316 9.39034 2.4316 10.2926C3.17003 11.1949 4.19783 11.8139 5.34067 12.0448C4.59721 12.2476 3.81715 12.2772 3.06045 12.1315C3.38327 13.1348 4.01156 14.0122 4.85746 14.641C5.70337 15.2698 6.72461 15.6185 7.77842 15.6384C6.73139 16.4614 5.53237 17.0699 4.24995 17.4291C2.96753 17.7882 1.62687 17.891 0.304688 17.7316C2.61411 19.2136 5.30121 19.9997 8.04524 19.9961\"\n            />\n          </svg>\n        </a>\n        <a\n          href=\"https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw\"\n          aria-label=\"Youtube\"\n          target=\"_blank\"\n          rel=\"noopener\"\n        >\n          <svg\n            width=\"29\"\n            height=\"20\"\n            viewBox=\"0 0 29 20\"\n            fill=\"none\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            alt=\"Youtube\"\n          >\n            <path\n              fill-rule=\"evenodd\"\n              clip-rule=\"evenodd\"\n              d=\"M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z\"\n            />\n          </svg>\n        </a>\n      </div>\n    </div>\n  </div>\n</main> -->\n\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\n\n<router-outlet></router-outlet>\n"
+            "templateData": "<storybook-header\r\n  [BrandLetter]=\"'D'\"\r\n  [BrandName]=\"'Daden'\"\r\n  [items]=\"items\"\r\n></storybook-header>\r\n<router-outlet></router-outlet>\r\n<storybook-footer [item]=\"'item'\"></storybook-footer>\r\n\r\n"
         },
         {
             "name": "BlockquoteComponent",
@@ -341,7 +464,7 @@
         },
         {
             "name": "CardDataComponent",
-            "id": "component-CardDataComponent-137cc90d7731cf274157f68fb5edf5814c856b3e5553c51f333a232b3ec88c770ba3b8a42a4bf85e596ce9b2169e733e45b84318eb021987034ec5f4b6d163be",
+            "id": "component-CardDataComponent-ed142e7dc30fc996401d07f988ea26f712937d701f12636c737510ddba2dbdf43d6571d64e270c22d0be696c05f058ee6738f791418f957549abcaa0fd8ed559",
             "file": "src/stories/carddata.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -353,18 +476,18 @@
                 "./carddata.css"
             ],
             "styles": [],
-            "template": " <div class=\"storybook-carddata\">\n  <storybook-chip\n    [label]=\"'lepel'\"\n    [circleColor]=\"'var(--red-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [circleColor]=\"'var(--green-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [circleColor]=\"'var(--yellow-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n  <storybook-chip\n    [circleColor]=\"'var(--blue-100)'\"\n    (click)=\"onClick.emit($event)\">\n  </storybook-chip>\n</div>\n",
+            "template": " <div class=\"storybook-carddata\">\n  <storybook-chip\n    *ngFor=\"let chip of chips\"\n    label=\"chip.label\"\n    circleColor=\"chip.circleColor\"\n    (click)=\"onClick.emit($event)\"\n  >\n  </storybook-chip>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
                 {
-                    "name": "label",
-                    "defaultValue": "'Label'",
+                    "name": "chips",
+                    "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 34,
-                    "type": "string",
+                    "line": 26,
+                    "type": "literal type[]",
                     "decorators": []
                 }
             ],
@@ -374,7 +497,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 37,
+                    "line": 32,
                     "type": "EventEmitter"
                 }
             ],
@@ -394,7 +517,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { ChipPrimary } from'./Chip.stories';\r\nimport ChipComponent from './chip.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-carddata', \r\n  imports: [ChipComponent],\r\n  template: ` \r\n    <div class=\"storybook-carddata\">\r\n      <storybook-chip\r\n        [label]=\"'lepel'\"\r\n        [circleColor]=\"'var(--red-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [circleColor]=\"'var(--green-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [circleColor]=\"'var(--yellow-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n      <storybook-chip\r\n        [circleColor]=\"'var(--blue-100)'\"\r\n        (click)=\"onClick.emit($event)\">\r\n      </storybook-chip>\r\n    </div>\r\n  `,\r\n  styleUrls: ['./carddata.css'],\r\n})\r\nexport default class CardDataComponent {@Input()\r\n  label = 'Label';\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-carddata'];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter, NO_ERRORS_SCHEMA } from '@angular/core';\r\nimport { ChipPrimary } from'./Chip.stories';\r\nimport ChipComponent from './chip.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-carddata', \r\n  imports: [ChipComponent],\r\n  template: ` \r\n    <div class=\"storybook-carddata\">\r\n      <storybook-chip\r\n        *ngFor=\"let chip of chips\"\r\n        label=\"chip.label\"\r\n        circleColor=\"chip.circleColor\"\r\n        (click)=\"onClick.emit($event)\"\r\n      >\r\n      </storybook-chip>\r\n    </div>\r\n  `,\r\n  styleUrls: ['./carddata.css'],\r\n})\r\nexport default class CardDataComponent {\r\n  \r\n  @Input()\r\n  chips: { \r\n    label: string; \r\n    circleColor: string \r\n  }[] = [];\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-carddata'];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -411,14 +534,14 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 39
+                        "line": 34
                     }
                 }
             }
         },
         {
             "name": "CardPlainComponent",
-            "id": "component-CardPlainComponent-889441a4f09e6b1a2b6651156c149f0f041bea786f197061c5cd4c55460dec173ed295cc45c8c763520d4144b05614f35d231a765360a9814bcc07412eb7db60",
+            "id": "component-CardPlainComponent-16d585e11fc355be871f8972caa1ed0c525a495da62fe2382403cd189c913505cda6337203b36e36a595fa1add288da14af89c50e94a2cb76af725309740771a",
             "file": "src/app/cardplain/cardplain.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -485,20 +608,20 @@
             "standalone": true,
             "imports": [
                 {
-                    "name": "CardComponent",
+                    "name": "DatacardComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, signal } from '@angular/core';\nimport CardComponent from '../../stories/card.component';\n\n@Component({\n  selector: 'app-card-plain',\n  standalone: true,\n  imports: [CardComponent],\n  templateUrl: './cardplain.component.html',\n  styleUrl: './cardplain.component.scss',\n})\nexport class CardPlainComponent {\n    content = signal(\"hoi\");\n    title = signal(\"Title hier\");\n    cardData = signal(\"formdata here\");\n    classes: [] = [];\n\n}\n",
+            "sourceCode": "import { Component, signal } from '@angular/core';\r\nimport DatacardComponent from '../../stories/datacard.component';\r\n\r\n@Component({\r\n  selector: 'app-card-plain',\r\n  standalone: true,\r\n  imports: [DatacardComponent],\r\n  templateUrl: './cardplain.component.html',\r\n  styleUrl: './cardplain.component.scss',\r\n})\r\nexport class CardPlainComponent {\r\n    content = signal(\"hoi\");\r\n    title = signal(\"Title hier\");\r\n    cardData = signal(\"formdata here\");\r\n    classes: [] = [];\r\n\r\n}\r\n",
             "styleUrl": "./cardplain.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>card works!</p>\n\n<!-- <storybook-card\n  [content]=\"content()\"\n  [title]=\"title()\"\n  [cardData]=\"cardData()\"\n></storybook-card> -->"
+            "templateData": "<p>card works!</p>\r\n\r\n<storybook-datacard\r\n  [content]=\"'This is the content of the card'\"\r\n  [title]=\"'Title of the Card'\"\r\n  [cardData]=\"'This is where the Card Data goes'\"\r\n></storybook-datacard>"
         },
         {
             "name": "ChipComponent",
@@ -817,7 +940,7 @@
         },
         {
             "name": "GraphCardComponent",
-            "id": "component-GraphCardComponent-b0618f11425304ac86e354b23ffe8ee289acfe3b640f5570a16f46ddf05f5d380b70f36dc8ad15f402a59cca87928890c5f527f37baf759d15b5186132ea0e9f",
+            "id": "component-GraphCardComponent-362bab21c1ea06099f88b3078054ebf7d5bce0a6ba83c75522619211dad0fad9f0afce88653c0f6ab1eecde09761f987e1551e504fac71e744e3bed212d44153",
             "file": "src/stories/graphCard.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -829,7 +952,7 @@
                 "./graphcard.css"
             ],
             "styles": [],
-            "template": " <div>\n  <storybook-card>\n  <h3> {{ title }} </h3>\n  <div class=\"card-content\">{{ content }}</div>\n  <storybook-carddata\n    [label]=\"'label'\">\n  </storybook-carddata>\n  </storybook-card>\n</div>",
+            "template": " <div>\n  <storybook-card>\n  <h3> {{ title }} </h3>\n  <div class=\"card-content\">{{ content }}</div>\n  <storybook-carddata>\n  </storybook-carddata>\n  </storybook-card>\n</div>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -839,7 +962,7 @@
                     "defaultValue": "'Card Data'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 31,
+                    "line": 34,
                     "type": "string",
                     "decorators": []
                 },
@@ -848,7 +971,7 @@
                     "defaultValue": "'content'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 28,
                     "type": "string",
                     "decorators": []
                 },
@@ -857,7 +980,7 @@
                     "defaultValue": "'Card Title'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 28,
+                    "line": 31,
                     "type": "string",
                     "decorators": []
                 }
@@ -883,7 +1006,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport CardComponent from './card.component';\r\nimport CardDataComponent from './carddata.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-GraphCard', \r\n  imports: [CardDataComponent, CardComponent],\r\n  template: ` \r\n    <div>\r\n      <storybook-card>\r\n      <h3> {{ title }} </h3>\r\n      <div class=\"card-content\">{{ content }}</div>\r\n      <storybook-carddata\r\n        [label]=\"'label'\">\r\n      </storybook-carddata>\r\n      </storybook-card>\r\n    </div>`,\r\n  styleUrls: ['./graphcard.css'],\r\n})\r\nexport default class GraphCardComponent {\r\n\r\n  @Input()\r\n  content = 'content';\r\n\r\n  @Input()\r\n  title = 'Card Title';\r\n\r\n  @Input()\r\n  cardData = 'Card Data';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-graphcard'];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport CardComponent from './card.component';\r\nimport CardDataComponent from './carddata.component'; \r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-GraphCard', \r\n  imports: [CardDataComponent, CardComponent],\r\n  template: ` \r\n    <div>\r\n      <storybook-card>\r\n      <h3> {{ title }} </h3>\r\n      <div class=\"card-content\">{{ content }}</div>\r\n      <storybook-carddata>\r\n      </storybook-carddata>\r\n      </storybook-card>\r\n    </div>`,\r\n  styleUrls: ['./graphcard.css'],\r\n})\r\n\r\n\r\n// [label]=\"'label'\"\r\n\r\nexport default class GraphCardComponent {\r\n\r\n  @Input()\r\n  content = 'content';\r\n\r\n  @Input()\r\n  title = 'Card Title';\r\n\r\n  @Input()\r\n  cardData = 'Card Data';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-graphcard'];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -900,14 +1023,14 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 33
+                        "line": 36
                     }
                 }
             }
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-180171d8384ad460cb191c52d676d115fae77bc043a1b23b1f6e2501b1ea5b7b1d773a53833e07e593038e30c7902c0ac1462cbe3a676f69c986c444278af6d3",
+            "id": "component-HeaderComponent-10c904a3ec9e2d1a025edc8a9d2caac201e2c099b15163038599892577e4852baa60496d2afb1b4ea6ceabc27eb8a83fa0c41358522092ba702f4d07368f62d5",
             "file": "src/stories/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -919,7 +1042,7 @@
                 "./header.css"
             ],
             "styles": [],
-            "template": "<header>\n\t<div class=\"wrapper\">\n\t\t<div class=\"navbar\">\n\t\t\t<div class=\"nav-left\">\n\t\t\t\t<a href=\"/daden/\" class=\"logo\">\n\t\t\t\t\t<div class=\"logo-img\">{{ BrandLetter }}</div>\n\t\t\t\t\t<div class=\"logo-text\">{{ BrandName }}</div>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t\t<div class=\"nav-right\">\n\t\t\t\t<a href=\"#\">{{ item }}</a>\n\t\t\t\t<a href=\"#\" class=\"active\">{{ item }}</a>\n\t\t\t\t<a href=\"#\">{{ item }}</a>\n\t\t\t\t<storybook-button class=\"cta-button\">{{ label }}</storybook-button>\n\t\t\t\t<!-- <div class=\"user-img\">D</div> -->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</header>",
+            "template": "<header>\n\t<div class=\"wrapper\">\n\t\t<div class=\"navbar\">\n\t\t\t<div class=\"nav-left\">\n\t\t\t\t<a href=\"/daden/\" class=\"logo\">\n\t\t\t\t\t<div class=\"logo-img\">{{ BrandLetter }}</div>\n\t\t\t\t\t<div class=\"logo-text\">{{ BrandName }}</div>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t\t<div class=\"nav-right\">\n\t\t\t\t@for (item of items; track $index) {\n\t\t\t\t\t<a [routerLink]=\"[item.path]\" routerLinkActive=\"router-link-active\" >{{ item.name }}</a>\n\t\t\t\t}\n\t\t\t\t<!-- <a href=\"#\">{{ item }}</a>\n\t\t\t\t<a href=\"#\" class=\"active\">{{ item }}</a>\n\t\t\t\t<a href=\"#\">{{ item }}</a> -->\n\t\t\t\t<storybook-button class=\"cta-button\">{{ label }}</storybook-button>\n\t\t\t\t<!-- <div class=\"user-img\">D</div> -->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</header>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -928,7 +1051,7 @@
                     "name": "BrandLetter",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 34,
+                    "line": 39,
                     "type": "",
                     "decorators": []
                 },
@@ -936,23 +1059,23 @@
                     "name": "BrandName",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 37,
+                    "line": 42,
                     "type": "",
                     "decorators": []
                 },
                 {
-                    "name": "item",
+                    "name": "items",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
-                    "type": "",
+                    "line": 45,
+                    "type": "IHeaderItems[]",
                     "decorators": []
                 },
                 {
                     "name": "label",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 43,
+                    "line": 48,
                     "type": "",
                     "decorators": []
                 }
@@ -973,12 +1096,16 @@
                 {
                     "name": "ButtonComponent",
                     "type": "component"
+                },
+                {
+                    "name": "RouterModule",
+                    "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport ButtonComponent from './button.component';\r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-header', \r\n  imports: [CommonModule, ButtonComponent],\r\n  template: `\r\n\t<header>\r\n\t\t<div class=\"wrapper\">\r\n\t\t\t<div class=\"navbar\">\r\n\t\t\t\t<div class=\"nav-left\">\r\n\t\t\t\t\t<a href=\"/daden/\" class=\"logo\">\r\n\t\t\t\t\t\t<div class=\"logo-img\">{{ BrandLetter }}</div>\r\n\t\t\t\t\t\t<div class=\"logo-text\">{{ BrandName }}</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"nav-right\">\r\n\t\t\t\t\t<a href=\"#\">{{ item }}</a>\r\n\t\t\t\t\t<a href=\"#\" class=\"active\">{{ item }}</a>\r\n\t\t\t\t\t<a href=\"#\">{{ item }}</a>\r\n\t\t\t\t\t<storybook-button class=\"cta-button\">{{ label }}</storybook-button>\r\n\t\t\t\t\t<!-- <div class=\"user-img\">D</div> -->\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n\r\n  @Input()\r\n  BrandLetter: 'D';\r\n\r\n  @Input()\r\n  BrandName: 'Daden';\r\n\r\n  @Input()\r\n  item: 'item';\r\n\r\n  @Input()\r\n  label: 'label';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-header', ` ${this.BrandLetter} `, ` ${this.BrandName} `, ` ${this.item} `, ` ${this.label} `];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { IHeaderItems } from './../app/interfaces/storybook/headeritem-interface';\r\nimport { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport ButtonComponent from './button.component';\r\nimport { RouterModule } from '@angular/router';\r\n\r\n@Component({\r\n  standalone:true,\r\n  selector: 'storybook-header', \r\n  imports: [CommonModule, ButtonComponent, RouterModule],\r\n  template: `\r\n\t<header>\r\n\t\t<div class=\"wrapper\">\r\n\t\t\t<div class=\"navbar\">\r\n\t\t\t\t<div class=\"nav-left\">\r\n\t\t\t\t\t<a href=\"/daden/\" class=\"logo\">\r\n\t\t\t\t\t\t<div class=\"logo-img\">{{ BrandLetter }}</div>\r\n\t\t\t\t\t\t<div class=\"logo-text\">{{ BrandName }}</div>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"nav-right\">\r\n\t\t\t\t\t@for (item of items; track $index) {\r\n\t\t\t\t\t\t<a [routerLink]=\"[item.path]\" routerLinkActive=\"router-link-active\" >{{ item.name }}</a>\r\n\t\t\t\t\t}\r\n\t\t\t\t\t<!-- <a href=\"#\">{{ item }}</a>\r\n\t\t\t\t\t<a href=\"#\" class=\"active\">{{ item }}</a>\r\n\t\t\t\t\t<a href=\"#\">{{ item }}</a> -->\r\n\t\t\t\t\t<storybook-button class=\"cta-button\">{{ label }}</storybook-button>\r\n\t\t\t\t\t<!-- <div class=\"user-img\">D</div> -->\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n\r\n  @Input()\r\n  BrandLetter: 'D';\r\n\r\n  @Input()\r\n  BrandName: 'Daden';\r\n\r\n  @Input()\r\n  items: IHeaderItems[];\r\n\r\n  @Input()\r\n  label: 'label';\r\n\r\n  public get classes(): string[] {\r\n\r\n    return ['storybook-header', ` ${this.BrandLetter} `, ` ${this.BrandName} `, ` ${this.items} `, ` ${this.label} `];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -995,10 +1122,53 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 45
+                        "line": 50
                     }
                 }
             }
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-d67f1591da178d9c8c5a953332d6d2037b72a9c069bc6719c29d01b4619dd93612f053c191b305f0e63f84e625c2211d4ab8eb25275b04d9e1d5466d81ef3cfe",
+            "file": "src/app/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "DatacardComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport DatacardComponent from '../../stories/datacard.component';\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  standalone: true,\r\n  imports: [DatacardComponent],\r\n  templateUrl: './home.component.html',\r\n  styleUrl: './home.component.scss'\r\n})\r\nexport class HomeComponent {\r\n\r\n}\r\n",
+            "styleUrl": "./home.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<h3>HOME WORKS</h3>\r\n"
         },
         {
             "name": "InfographicComponent",
@@ -1075,6 +1245,87 @@
                     }
                 }
             }
+        },
+        {
+            "name": "InfographicComponent",
+            "id": "component-InfographicComponent-aa69c15c45e01ccb0cb20a36eecc504e8e66a08e639442dcc46e0b7512aaddb19f13d7a0a34644bf40c672f1fb3fcf0cc1dbf212edba8ad8f870e31758ff60e2-1",
+            "file": "src/app/infographic/infographic.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-infographic",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./infographic.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "cardData",
+                    "defaultValue": "\"Hier varia DATA\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "contenti",
+                    "defaultValue": "\"Hier variabele content\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "\"Tieten... titel bedoel ik\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "DatacardComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "DashboardComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport DatacardComponent from '../../stories/datacard.component';\r\nimport DashboardComponent from '../../stories/dashboard.component';\r\n\r\n@Component({\r\n  selector: 'app-infographic',\r\n  standalone: true,\r\n  imports: [DatacardComponent, DashboardComponent],\r\n  templateUrl: './infographic.component.html',\r\n  styleUrl: './infographic.component.scss'\r\n})\r\nexport class InfographicComponent {\r\n  title: string = \"Tieten... titel bedoel ik\";\r\n  contenti: string = \"Hier variabele content\";\r\n  cardData: string = \"Hier varia DATA\";\r\n\r\n\r\n}\r\n",
+            "styleUrl": "./infographic.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "InfographicComponent-1",
+            "templateData": "    <div style=\"margin: 10px;\">\r\n    <storybook-datacard\r\n      [content]=\"this.contenti\"\r\n      [title]=\"this.title\"\r\n      [cardData]=\"this.cardData\"\r\n    ></storybook-datacard>\r\n    <storybook-datacard\r\n    [content]=\"this.contenti\"\r\n    [title]=\"this.title\"\r\n    [cardData]=\"this.cardData\"\r\n  ></storybook-datacard>\r\n</div>"
         },
         {
             "name": "ListstyleComponent",
@@ -1224,7 +1475,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-                "defaultValue": "{\n  providers: [provideRouter(routes)]\n}"
+                "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
             },
             {
                 "name": "CardDataPrimary",
@@ -1234,7 +1485,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    label: Chip.ChipPrimary.args?.label || 'Default Label',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n  }),\r\n  argTypes: {\r\n    chips: { control: 'array' }, // Add this line to enable controls for 'chips'\r\n  },\r\n  args: {\r\n    chips: [\r\n      { label: 'lepel', circleColor: 'var(--red-100)' },\r\n      { label: 'someLabel', circleColor: 'var(--green-100)' },\r\n      // Add more chip data as needed\r\n    ],\r\n  },\r\n}"
             },
             {
                 "name": "ChipPrimary",
@@ -1284,7 +1535,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    BrandLetter: 'D',\r\n    BrandName: 'Daden',\r\n    item: 'item',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    BrandLetter: 'D',\r\n    BrandName: 'Daden',\r\n    items: [],\r\n  },\r\n}"
             },
             {
                 "name": "Info",
@@ -1390,7 +1641,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/dashboard.stories.ts",
+                "file": "src/stories/Dashboard.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<Dashboard>",
@@ -1510,7 +1761,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/dashboard.stories.ts",
+                "file": "src/stories/Dashboard.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1679,7 +1930,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Dashboard>",
-                "file": "src/stories/dashboard.stories.ts",
+                "file": "src/stories/Dashboard.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1774,7 +2025,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-                    "defaultValue": "{\n  providers: [provideRouter(routes)]\n}"
+                    "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
                 }
             ],
             "src/stories/Carddata.stories.ts": [
@@ -1786,7 +2037,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n      }),\r\n  args: {\r\n    label: Chip.ChipPrimary.args?.label || 'Default Label',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n  }),\r\n  argTypes: {\r\n    chips: { control: 'array' }, // Add this line to enable controls for 'chips'\r\n  },\r\n  args: {\r\n    chips: [\r\n      { label: 'lepel', circleColor: 'var(--red-100)' },\r\n      { label: 'someLabel', circleColor: 'var(--green-100)' },\r\n      // Add more chip data as needed\r\n    ],\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1994,7 +2245,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    BrandLetter: 'D',\r\n    BrandName: 'Daden',\r\n    item: 'item',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    BrandLetter: 'D',\r\n    BrandName: 'Daden',\r\n    items: [],\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -2051,12 +2302,12 @@
                     "defaultValue": "{\r\n  args: {\r\n    content: 'This is the content of the card', \r\n  },\r\n}"
                 }
             ],
-            "src/stories/dashboard.stories.ts": [
+            "src/stories/Dashboard.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/dashboard.stories.ts",
+                    "file": "src/stories/Dashboard.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<Dashboard>",
@@ -2066,7 +2317,7 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/dashboard.stories.ts",
+                    "file": "src/stories/Dashboard.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -2264,13 +2515,13 @@
                     "kind": 183
                 }
             ],
-            "src/stories/dashboard.stories.ts": [
+            "src/stories/Dashboard.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Dashboard>",
-                    "file": "src/stories/dashboard.stories.ts",
+                    "file": "src/stories/Dashboard.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2386,12 +2637,21 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/about/about.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AboutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/app.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -2411,6 +2671,33 @@
                 "name": "CardPlainComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/infographic/infographic.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InfographicComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/interfaces/storybook/headeritem-interface.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "IHeaderItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -2595,6 +2882,15 @@
             },
             {
                 "filePath": "src/stories/Carddata.stories.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChipData",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Carddata.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2629,6 +2925,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2825,26 +3141,6 @@
                 "name": "DashboardComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/dashboard.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/dashboard.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
                 "status": "low"
             },
             {

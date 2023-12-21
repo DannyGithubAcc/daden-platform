@@ -12,13 +12,16 @@ import CardDataComponent from './carddata.component';
       <storybook-card>
       <h3> {{ title }} </h3>
       <div class="card-content">{{ content }}</div>
-      <storybook-carddata
-        [label]="'label'">
+      <storybook-carddata>
       </storybook-carddata>
       </storybook-card>
     </div>`,
   styleUrls: ['./graphcard.css'],
 })
+
+
+// [label]="'label'"
+
 export default class GraphCardComponent {
 
   @Input()

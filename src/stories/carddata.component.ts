@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ChipPrimary } from'./Chip.stories';
 import ChipComponent from './chip.component'; 
 
@@ -10,28 +10,23 @@ import ChipComponent from './chip.component';
   template: ` 
     <div class="storybook-carddata">
       <storybook-chip
-        [label]="'lepel'"
-        [circleColor]="'var(--red-100)'"
-        (click)="onClick.emit($event)">
-      </storybook-chip>
-      <storybook-chip
-        [circleColor]="'var(--green-100)'"
-        (click)="onClick.emit($event)">
-      </storybook-chip>
-      <storybook-chip
-        [circleColor]="'var(--yellow-100)'"
-        (click)="onClick.emit($event)">
-      </storybook-chip>
-      <storybook-chip
-        [circleColor]="'var(--blue-100)'"
-        (click)="onClick.emit($event)">
+        *ngFor="let chip of chips"
+        label="chip.label"
+        circleColor="chip.circleColor"
+        (click)="onClick.emit($event)"
+      >
       </storybook-chip>
     </div>
   `,
   styleUrls: ['./carddata.css'],
 })
-export default class CardDataComponent {@Input()
-  label = 'Label';
+export default class CardDataComponent {
+  
+  @Input()
+  chips: { 
+    label: string; 
+    circleColor: string 
+  }[] = [];
 
   @Output()
   onClick = new EventEmitter<Event>();
