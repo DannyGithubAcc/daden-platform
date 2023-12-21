@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
-import CardComponent from '../../stories/card.component';
+import DatacardComponent from '../../stories/datacard.component';
 
 @Component({
   selector: 'app-card-plain',
   standalone: true,
-  imports: [CardComponent],
+  imports: [DatacardComponent],
   templateUrl: './cardplain.component.html',
   styleUrl: './cardplain.component.scss',
 })

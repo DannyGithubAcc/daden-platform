@@ -24,6 +24,6 @@ export const HeaderPrimary: Story = {
   args: {
     BrandLetter: 'D',
     BrandName: 'Daden',
-    item: 'item',
+    items: [],
   },
 };

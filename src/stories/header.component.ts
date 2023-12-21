@@ -1,11 +1,13 @@
+import { IHeaderItems } from './../app/interfaces/storybook/headeritem-interface';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import ButtonComponent from './button.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone:true,
   selector: 'storybook-header', 
-  imports: [CommonModule, ButtonComponent],
+  imports: [CommonModule, ButtonComponent, RouterModule],
   template: `
 	<header>
 		<div class="wrapper">
@@ -17,9 +19,12 @@ import ButtonComponent from './button.component';
 					</a>
 				</div>
 				<div class="nav-right">
-					<a href="#">{{ item }}</a>
+					@for (item of items; track $index) {
+						<a [routerLink]="[item.path]" routerLinkActive="router-link-active" >{{ item.name }}</a>
+					}
+					<!-- <a href="#">{{ item }}</a>
 					<a href="#" class="active">{{ item }}</a>
-					<a href="#">{{ item }}</a>
+					<a href="#">{{ item }}</a> -->
 					<storybook-button class="cta-button">{{ label }}</storybook-button>
 					<!-- <div class="user-img">D</div> -->
 				</div>
@@ -37,13 +42,13 @@ export default class HeaderComponent {
   BrandName: 'Daden';
 
   @Input()
-  item: 'item';
+  items: IHeaderItems[];
 
   @Input()
   label: 'label';
 
   public get classes(): string[] {
 
-    return ['storybook-header', ` ${this.BrandLetter} `, ` ${this.BrandName} `, ` ${this.item} `, ` ${this.label} `];
+    return ['storybook-header', ` ${this.BrandLetter} `, ` ${this.BrandName} `, ` ${this.items} `, ` ${this.label} `];
   }
 }
